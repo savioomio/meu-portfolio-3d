@@ -1,6 +1,6 @@
 import { useRef, useMemo } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
-import { Text, useScroll, ScrollControls } from '@react-three/drei'
+import { Text, useScroll, ScrollControls, Image, RoundedBox, Environment } from '@react-three/drei'
 import * as THREE from 'three'
 import './App.css'
 
@@ -54,24 +54,64 @@ function AnimatedCamera() {
 function HeroSection() {
   return (
     <group position={[0, 0, 0]}>
-      <Text
-        fontSize={1.5}
-        color="#4f46e5"
-        anchorX="center"
-        anchorY="middle"
-        position={[0, 2, 0]}
-      >
-        Sávio Pessôa Afonso
-      </Text>
-      <Text
-        fontSize={0.5}
-        color="#64748b"
-        anchorX="center"
-        anchorY="middle"
-        position={[0, 1, 0]}
-      >
-        Programador Front end • Web, Mobile & Desktop • Modelador 3D
-      </Text>
+      {/* Container de Vidro Esquerdo */}
+      <group position={[-2.5, 0, 0]}>
+        <RoundedBox args={[6, 4, 0.2]} radius={0.2}>
+          <meshPhysicalMaterial
+            transparent
+            color="#1e293b" // Base escura azulada
+            roughness={0.2}
+            metalness={0.1}
+            transmission={0.6} // Transparência tipo vidro
+            thickness={2} // Refração
+            envMapIntensity={1.5}
+            clearcoat={1}
+            clearcoatRoughness={0.1}
+          />
+        </RoundedBox>
+
+        <Text
+          fontSize={0.7}
+          color="#ffffff"
+          font="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hjp-Ek-_EeA.woff"
+          anchorX="center"
+          anchorY="middle"
+          position={[0, 0.5, 0.15]}
+          fontWeight={700}
+        >
+          Sávio Pessôa Afonso
+        </Text>
+        <Text
+          fontSize={0.25}
+          color="#94a3b8"
+          font="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hjp-Ek-_EeA.woff"
+          anchorX="center"
+          anchorY="middle"
+          position={[0, -0.3, 0.15]}
+          maxWidth={5}
+          textAlign="center"
+          lineHeight={1.5}
+        >
+          PROGRAMADOR FRONT END • WEB, MOBILE & DESKTOP • MODELADOR 3D
+        </Text>
+      </group>
+
+      {/* Imagem do Usuário na Direita */}
+      {/* Usando o componente Image do Drei que lida bem com texturas */}
+      <group position={[2.5, 0, 0]}>
+        {/* Glow atrás da imagem para destacar */}
+        <mesh position={[0, 0, -0.1]}>
+             <circleGeometry args={[2.2, 32]} />
+             <meshBasicMaterial color="#4f46e5" transparent opacity={0.2} depthWrite={false} />
+        </mesh>
+        <Image
+          url="/profile.png"
+          scale={[4, 4]}
+          transparent
+          opacity={1}
+          radius={0.2} // Bordas levemente arredondadas na imagem também
+        />
+      </group>
     </group>
   )
 }
@@ -266,8 +306,7 @@ function ContactSection() {
 
 const StarShaderMaterial = {
   vertexShader: `
-    uniform float uTime;
-    uniform float uSpeed;
+    uniform float uTravel;
     attribute float aSize;
     attribute vec3 aRandom;
     varying float vAlpha;
@@ -275,23 +314,20 @@ const StarShaderMaterial = {
     void main() {
       vec3 pos = position;
       
-      // Move stars towards camera based on speed
-      pos.z += uTime * uSpeed * 50.0;
+      // Move stars based on accumulated scroll distance
+      pos.z += uTravel;
       
-      // Loop stars within a box
+      // Loop stars within a box of depth 200
       float depth = 200.0;
       pos.z = mod(pos.z + depth * 0.5, depth) - depth * 0.5;
       
-      // Stretch stars based on speed to create "warp" streaks
-      float stretch = 1.0 + uSpeed * 20.0;
-      
       vec4 mvPosition = modelViewMatrix * vec4(pos, 1.0);
       
-      // Scale size by distance and random factor
-      gl_PointSize = aSize * (100.0 / -mvPosition.z) * stretch;
+      // Scale size by distance
+      gl_PointSize = aSize * (100.0 / -mvPosition.z);
       gl_Position = projectionMatrix * mvPosition;
       
-      // Fade out stars at the edges of the box
+      // Fade out stars at the edges of the box to avoid popping
       float dist = abs(pos.z);
       vAlpha = 1.0 - smoothstep(depth * 0.4, depth * 0.5, dist);
     }
@@ -318,6 +354,8 @@ function WarpStars() {
   const count = 5000
   const meshRef = useRef<THREE.Points>(null)
   const scroll = useScroll()
+  const travelRef = useRef(0) // Accumulator for total scroll distance
+  const lastOffsetRef = useRef(0) // Track last scroll offset
   
   // Create random star positions
   const [positions, sizes, randoms] = useMemo(() => {
@@ -341,33 +379,24 @@ function WarpStars() {
   }, [])
   
   const uniforms = useMemo(() => ({
-    uTime: { value: 0 },
-    uSpeed: { value: 0 }
+    uTravel: { value: 0 }
   }), [])
   
   useFrame((state) => {
     if (meshRef.current) {
-      // Update time
-      uniforms.uTime.value = state.clock.elapsedTime
+      // Calculate scroll delta (difference from last frame)
+      const currentOffset = scroll.offset
+      const delta = currentOffset - lastOffsetRef.current
+      lastOffsetRef.current = currentOffset
       
-      // Get scroll speed (delta of scroll offset)
-      // scroll.delta gives the change in scroll position
-      // We smooth it out or amplify it for the effect
-      const targetSpeed = scroll.delta * 200 // Amplify scroll delta
+      // Accumulate the scroll distance (multiply for visible movement)
+      travelRef.current += delta * 100
       
-      // Lerp speed for smoothness
-      uniforms.uSpeed.value = THREE.MathUtils.lerp(
-        uniforms.uSpeed.value,
-        targetSpeed,
-        0.1
-      )
-      
-      // Pass uniforms to shader
+      // Pass accumulated travel to shader
       const material = meshRef.current.material as THREE.ShaderMaterial
-      material.uniforms.uTime.value = uniforms.uTime.value
-      material.uniforms.uSpeed.value = uniforms.uSpeed.value
+      material.uniforms.uTravel.value = travelRef.current
       
-      // Make stars follow camera
+      // Make stars follow camera (so we always have stars around us)
       meshRef.current.position.z = state.camera.position.z
     }
   })
@@ -422,6 +451,9 @@ function Scene() {
       {/* Fog para esconder seções distantes */}
       {/* Fog para esconder seções distantes */}
       <fog attach="fog" args={['#000000', 10, 25]} />
+      
+      {/* Environment para reflexos realistas no vidro */}
+      <Environment preset="city" background={false} />
       
       <WarpStars />
       <AnimatedCamera />
