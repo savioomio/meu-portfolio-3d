@@ -1,0 +1,12 @@
+# https://www.robotstxt.org/robotstxt.html
+
+# Permitir que todos os robôs indexem o site
+User-agent: *
+Allow: /
+
+# Bloquear pastas de sistema ou arquivos de configuração (boa prática)
+Disallow: /node_modules/
+Disallow: /dist/
+
+# Link para o Sitemap (ajudar o Google a encontrar suas páginas)
+Sitemap: https://savioomiodev.com.br/sitemap.xml
