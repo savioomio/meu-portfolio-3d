@@ -466,19 +466,81 @@ function Scene() {
   )
 }
 
+// --- TIPOS ---
+interface Project {
+  title: string;
+  tech: string;
+}
+
+const PROJECTS: Project[] = [
+  { title: 'E-commerce Platform', tech: 'React • TypeScript • Stripe' },
+  { title: 'Task Management App', tech: 'Next.js • Prisma • PostgreSQL' },
+  { title: '3D Portfolio Website', tech: 'React Three Fiber • GSAP' }
+];
+
 function App() {
   return (
     <div style={{ position: 'relative' }}>
-      {/* Canvas 3D fixo */}
-      <div style={{ 
-        position: 'fixed', 
-        top: 0, 
-        left: 0, 
-        width: '100vw', 
-
-        height: '100vh',
-        backgroundColor: '#000000'
+      {/* Camada SEO/Acessibilidade: Visível apenas para robôs e leitores de tela */}
+      <main style={{
+        position: 'absolute',
+        width: '1px',
+        height: '1px',
+        padding: '0',
+        margin: '-1px',
+        overflow: 'hidden',
+        clip: 'rect(0, 0, 0, 0)',
+        whiteSpace: 'nowrap',
+        border: '0',
+        zIndex: -1
       }}>
+        <h1>Sávio Pessôa Afonso - Portfólio 3D</h1>
+        
+        <section>
+          <h2>Sobre Mim</h2>
+          <p>Trabalhando na Wicomm. Estudando Inglês na Wise Up | Basic II.</p>
+          <p>Especialista em Programação Front-End, Web, Mobile, Desktop e Modelagem 3D.</p>
+        </section>
+
+        <section>
+          <h2>Habilidades (Skills)</h2>
+          <ul>
+            <li>Arduino, C, Bootstrap, Tailwind, PHP</li>
+            <li>WordPress, Python, Django, JavaScript</li>
+            <li>React, TypeScript</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Projetos</h2>
+          {PROJECTS.map((p, i) => (
+            <article key={i}>
+              <h3>{p.title}</h3>
+              <p>{p.tech}</p>
+            </article>
+          ))}
+        </section>
+
+        <section>
+          <h2>Contato</h2>
+          <p>E-mail: saviopessaafonso@gmail.com</p>
+          <p>Instagram: @savioomio</p>
+          <p>LinkedIn: savioomio</p>
+        </section>
+      </main>
+
+      {/* Canvas 3D fixo */}
+      <div 
+        style={{ 
+          position: 'fixed', 
+          top: 0, 
+          left: 0, 
+          width: '100vw', 
+          height: '100vh',
+          backgroundColor: '#000000'
+        }}
+        aria-hidden="true" // Oculta o Canvas para leitores de tela, pois já temos a camada acima
+      >
         <Canvas camera={{ position: [0, 0, 10], fov: 75 }}>
           <ScrollControls pages={5} damping={0.3}>
             <Scene />
@@ -487,17 +549,17 @@ function App() {
       </div>
       
       {/* UI Overlay */}
-      <div style={{
+      <nav style={{
         position: 'fixed',
         bottom: '20px',
         right: '20px',
         color: 'white',
         fontSize: '14px',
         zIndex: 10,
-        fontFamily: 'Arial, sans-serif'
+        fontFamily: 'Inter, system-ui, sans-serif'
       }}>
         Scroll para navegar
-      </div>
+      </nav>
     </div>
   )
 }
