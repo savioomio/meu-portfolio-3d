@@ -12,7 +12,7 @@ import { Contact } from './components/Contact'
 
 function App() {
   return (
-    <div className="bg-black min-h-screen text-slate-200 selection:bg-cyan-500/30 selection:text-cyan-100 font-sans">
+    <div className="bg-black min-h-screen text-slate-100 selection:bg-cyan-500/30 selection:text-white font-sans">
       <ConstructionPopup />
       
       {/* BACKGROUND LAYER (3D CANVAS) */}

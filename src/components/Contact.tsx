@@ -15,12 +15,12 @@ export function Contact() {
          </a>
 
          <div className="mt-12 flex justify-center gap-8">
-            <a href="https://linkedin.com/in/savioomio" target="_blank" className="text-slate-500 hover:text-white transition-colors">LinkedIn</a>
-            <a href="https://instagram.com/savioomio" target="_blank" className="text-slate-500 hover:text-white transition-colors">Instagram</a>
-            <a href="https://github.com/savioomio" target="_blank" className="text-slate-500 hover:text-white transition-colors">GitHub</a>
+            <a href="https://linkedin.com/in/savioomio" target="_blank" className="text-slate-400 hover:text-white transition-colors">LinkedIn</a>
+            <a href="https://instagram.com/savioomio" target="_blank" className="text-slate-400 hover:text-white transition-colors">Instagram</a>
+            <a href="https://github.com/savioomio" target="_blank" className="text-slate-400 hover:text-white transition-colors">GitHub</a>
          </div>
          
-         <div className="mt-20 text-xs text-slate-700">
+         <div className="mt-20 text-xs text-slate-500">
            © 2026 Sávio Pessôa Afonso. All systems nominal.
          </div>
       </div>
