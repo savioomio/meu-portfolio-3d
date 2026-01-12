@@ -17,6 +17,8 @@
       content="Programador Front End, Web Design, React, Three.js, Portfólio, Desenvolvimento Web, Sávio Pessôa Afonso"
     />
     <meta name="author" content="Sávio Pessôa Afonso" />
+    <link rel="canonical" href="https://savioomiodev.com.br/" />
+    <meta name="robots" content="index, follow" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -31,20 +33,45 @@
     />
     <meta property="og:image" content="https://savioomiodev.com.br/og-image.png" />
 
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta
-      property="twitter:title"
+      name="twitter:title"
       content="Sávio Pessôa Afonso | Portfólio"
     />
     <meta
-      property="twitter:description"
+      name="twitter:description"
       content="Explore uma jornada espacial através do meu trabalho como desenvolvedor front-end e modelador 3D."
     />
-    <meta property="twitter:image" content="https://savioomiodev.com.br/og-image.png" />
+    <meta name="twitter:image" content="https://savioomiodev.com.br/og-image.png" />
 
     <!-- Preload para Performance -->
-    <link rel="preload" href="/profile.png" as="image" />
+    <link rel="preload" href="/capa_portifolio.webp" as="image" />
+    <!-- Schema.org Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sávio Pessôa Afonso",
+        "url": "https://savioomiodev.com.br/",
+        "image": "https://savioomiodev.com.br/capa_portifolio.webp",
+        "jobTitle": "Programador Front End & Modelador 3D",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Wicomm"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/savioomio",
+          "https://www.instagram.com/savioomio",
+          "https://github.com/savioomio"
+        ],
+        "description": "Programador Front-End, Web, Mobile e Desktop. Especialista em experiências digitais interativas e modelagem 3D."
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
