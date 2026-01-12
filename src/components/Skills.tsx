@@ -13,7 +13,7 @@ export function Skills() {
               Tech Stack
             </h2>
             <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
-            <p className="text-slate-400 mt-4 max-w-lg mx-auto">
+            <p className="text-slate-200 mt-4 max-w-lg mx-auto">
               Ferramentas e tecnologias que utilizo para transformar ideias em código.
             </p>
           </div>

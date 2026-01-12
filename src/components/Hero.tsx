@@ -17,11 +17,11 @@ export function Hero() {
               </span>
             </h1>
             
-            <p className="text-slate-400 text-lg md:text-xl font-light leading-relaxed max-w-lg mx-auto md:mx-0">
+            <p className="text-slate-200 text-lg md:text-xl font-light leading-relaxed max-w-lg mx-auto md:mx-0">
                 PROGRAMADOR FRONT END • WEB, MOBILE & DESKTOP • MODELADOR 3D
             </p>
             
-            <p className="text-slate-500 max-w-md mx-auto md:mx-0">
+            <p className="text-slate-200 max-w-md mx-auto md:mx-0">
                 Transformo ideias em experiências digitais imersivas e funcionais.
             </p>
         </div>
@@ -32,12 +32,19 @@ export function Hero() {
             <div className="absolute inset-0 border border-blue-500/20 rounded-full scale-105 animate-pulse"></div>
             <div className="absolute inset-0 border border-purple-500/20 rounded-full scale-125 delay-75"></div>
             
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-slate-800/80 shadow-[0_0_40px_rgba(79,70,229,0.3)] backdrop-blur-sm bg-slate-900/50">
-                <img 
-                    src="/capa_portifolio.webp" 
-                    alt="Sávio Profile" 
-                    className="w-full h-full object-cover"
-                />
+            <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-slate-800/80 shadow-[0_0_40px_rgba(79,70,229,0.3)] backdrop-blur-sm bg-slate-900/50">
+                <picture>
+                    <source media="(max-width: 768px)" srcSet="/capa_portifolio_mob.webp" />
+                    <source media="(min-width: 769px)" srcSet="/capa_portifolio.webp" />
+                    <img 
+                        src="/capa_portifolio.webp" 
+                        alt="Sávio Profile" 
+                        width={434}
+                        height={434}
+                        loading="eager"
+                        className="w-full h-full object-cover"
+                    />
+                </picture>
             </div>
         </div>
         

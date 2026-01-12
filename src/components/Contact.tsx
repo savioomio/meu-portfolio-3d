@@ -3,7 +3,7 @@ export function Contact() {
     <footer className="py-20 border-t border-slate-800 bg-black/60 backdrop-blur-lg relative z-10">
       <div className="max-w-4xl mx-auto px-6 text-center">
          <h2 className="text-3xl font-bold text-white mb-8">Iniciar Transmissão</h2>
-         <p className="text-slate-400 mb-8 max-w-lg mx-auto">
+         <p className="text-slate-200 mb-8 max-w-lg mx-auto">
            Tem um projeto em mente ou quer apenas trocar uma ideia sobre tecnologia e o universo?
          </p>
          
@@ -15,12 +15,12 @@ export function Contact() {
          </a>
 
          <div className="mt-12 flex justify-center gap-8">
-            <a href="https://linkedin.com/in/savioomio" target="_blank" className="text-slate-400 hover:text-white transition-colors">LinkedIn</a>
-            <a href="https://instagram.com/savioomio" target="_blank" className="text-slate-400 hover:text-white transition-colors">Instagram</a>
-            <a href="https://github.com/savioomio" target="_blank" className="text-slate-400 hover:text-white transition-colors">GitHub</a>
+            <a href="https://linkedin.com/in/savioomio" target="_blank" className="text-slate-200 hover:text-white transition-colors">LinkedIn</a>
+            <a href="https://instagram.com/savioomio" target="_blank" className="text-slate-200 hover:text-white transition-colors">Instagram</a>
+            <a href="https://github.com/savioomio" target="_blank" className="text-slate-200 hover:text-white transition-colors">GitHub</a>
          </div>
          
-         <div className="mt-20 text-xs text-slate-500">
+         <div className="mt-20 text-xs text-white">
            © 2026 Sávio Pessôa Afonso. All systems nominal.
          </div>
       </div>
