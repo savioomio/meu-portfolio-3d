@@ -10,11 +10,8 @@ export function Hero() {
                 NAV-SYS: ONLINE
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
-              Sávio<br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-                Pessôa Afonso
-              </span>
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-white">
+              Sávio Pessôa Afonso
             </h1>
             
             <p className="text-slate-200 text-lg md:text-xl font-light leading-relaxed max-w-lg mx-auto md:mx-0">
