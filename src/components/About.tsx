@@ -1,6 +1,6 @@
 export function About() {
     return (
-        <section className="min-h-screen flex items-center justify-center p-6 relative z-10">
+        <section id="about" className="min-h-screen flex items-center justify-center p-6 relative z-10">
             <div className="max-w-4xl w-full bg-slate-900/40 backdrop-blur-md rounded-2xl border border-slate-700/50 p-8 md:p-12 relative overflow-hidden group">
                  {/* Decorative Corner Markers (Sci-Fi HUD) */}
                  <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-cyan-500/50 rounded-tl-lg"></div>

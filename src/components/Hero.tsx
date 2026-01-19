@@ -1,6 +1,6 @@
 export function Hero() {
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center relative z-10 p-6 md:p-20 overflow-hidden">
+    <section id="home" className="min-h-screen flex flex-col justify-center items-center relative z-10 p-6 md:p-20 overflow-hidden">
       
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
         

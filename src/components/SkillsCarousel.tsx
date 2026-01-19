@@ -39,7 +39,7 @@ export function SkillsCarousel() {
   const columnCount = isMobile ? 3 : 4
 
   return (
-    <section className="py-10 bg-background min-h-screen flex items-center justify-center">
+    <section id="skills" className="py-10 bg-background min-h-screen flex items-center justify-center">
       <div className="mx-auto flex w-full max-w-screen-lg flex-col items-center px-3">
         <div className="text-center mb-10">
           <h2 className="tracking-tight pb-3 text-5xl sm:text-6xl lg:text-[6rem] font-bold text-white">

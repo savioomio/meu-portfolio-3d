@@ -1,7 +1,7 @@
 import { Suspense, lazy } from 'react'
 
 
-// Custom Components (Critical Path)
+import { Header } from './components/Header'
 import { ConstructionPopup } from './components/ConstructionPopup'
 import { Hero } from './components/Hero'
 
@@ -15,6 +15,7 @@ const Contact = lazy(() => import('./components/Contact').then(module => ({ defa
 function App() {
   return (
     <div className="bg-black min-h-screen text-slate-100 selection:bg-cyan-500/30 selection:text-white font-sans">
+      <Header />
       <ConstructionPopup />
       
       <Suspense fallback={<div className="fixed inset-0 z-0 bg-black" />}>

@@ -18,7 +18,7 @@ export function Projects() {
   ]
 
   return (
-    <section className="py-20 flex flex-col items-center p-6 relative z-10">
+    <section id="projects" className="py-20 flex flex-col items-center p-6 relative z-10">
        <div className="max-w-6xl w-full">
           <h2 className="text-4xl font-bold text-white mb-12 flex items-center gap-4">
              <span className="w-2 h-8 bg-purple-500 rounded-full"></span>
