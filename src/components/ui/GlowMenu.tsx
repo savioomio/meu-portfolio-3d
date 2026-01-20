@@ -63,13 +63,11 @@ const sharedTransition = {
 
 export const MenuBar = React.forwardRef<HTMLElement, MenuBarProps>(
   ({ className, items, activeItem, onItemClick, orientation = "horizontal", ...props }, ref) => {
-    const isDarkTheme = true
-
     return (
       <motion.nav
         ref={ref}
         className={cn(
-          "px-2 py-6 lg:p-2 rounded-2xl bg-gradient-to-b from-background/80 to-background/40 backdrop-blur-lg shadow-lg relative overflow-hidden",
+          "px-2 py-6 lg:p-2 rounded-2xl lg:backdrop-blur-lg shadow-lg relative overflow-hidden border border-glass lg:[background:var(--glass-primary)]",
           className,
         )}
         initial="initial"
@@ -77,11 +75,7 @@ export const MenuBar = React.forwardRef<HTMLElement, MenuBarProps>(
         {...props}
       >
         <motion.div
-          className={`absolute bg-gradient-radial from-transparent ${
-            isDarkTheme
-              ? "via-blue-400/30 via-30% via-purple-400/30 via-60% via-red-400/30 via-90%"
-              : "via-blue-400/20 via-30% via-purple-400/20 via-60% via-red-400/20 via-90%"
-          } to-transparent rounded-3xl z-0 pointer-events-none`}
+          className="absolute bg-gradient-radial from-transparent via-accent/20 to-transparent rounded-3xl z-0 pointer-events-none"
           variants={navGlowVariants}
         />
         <ul className={cn("flex items-center relative z-10", orientation === "vertical" ? "flex-col gap-6" : "flex-row gap-2")}>

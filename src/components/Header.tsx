@@ -11,7 +11,6 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('Home');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const isDark = true;
 
 
 
@@ -20,36 +19,36 @@ export function Header() {
       icon: Home,
       label: 'Home',
       href: '#home',
-      gradient: "radial-gradient(circle, rgba(59,130,246,0.15) 0%, rgba(37,99,235,0.06) 50%, rgba(29,78,216,0) 100%)",
-      iconColor: "text-blue-500",
+      gradient: "radial-gradient(circle, rgba(97,218,251,0.15) 0%, rgba(97,218,251,0.06) 50%, rgba(97,218,251,0) 100%)",
+      iconColor: "text-accent",
     },
     {
       icon: User,
       label: 'Sobre',
       href: '#about',
-      gradient: "radial-gradient(circle, rgba(168,85,247,0.15) 0%, rgba(147,51,234,0.06) 50%, rgba(126,34,206,0) 100%)",
-      iconColor: "text-purple-500",
+      gradient: "radial-gradient(circle, rgba(97,218,251,0.15) 0%, rgba(97,218,251,0.06) 50%, rgba(97,218,251,0) 100%)",
+      iconColor: "text-accent",
     },
     {
       icon: Cpu,
       label: 'Skills',
       href: '#skills',
-      gradient: "radial-gradient(circle, rgba(34,197,94,0.15) 0%, rgba(22,163,74,0.06) 50%, rgba(21,128,61,0) 100%)",
-      iconColor: "text-green-500",
+      gradient: "radial-gradient(circle, rgba(97,218,251,0.15) 0%, rgba(97,218,251,0.06) 50%, rgba(97,218,251,0) 100%)",
+      iconColor: "text-accent",
     },
     {
       icon: Briefcase,
       label: 'Projetos',
       href: '#projects',
-      gradient: "radial-gradient(circle, rgba(249,115,22,0.15) 0%, rgba(234,88,12,0.06) 50%, rgba(194,65,12,0) 100%)",
-      iconColor: "text-orange-500",
+      gradient: "radial-gradient(circle, rgba(97,218,251,0.15) 0%, rgba(97,218,251,0.06) 50%, rgba(97,218,251,0) 100%)",
+      iconColor: "text-accent",
     },
     {
       icon: Mail,
       label: 'Contato',
       href: '#contact',
-      gradient: "radial-gradient(circle, rgba(239,68,68,0.15) 0%, rgba(220,38,38,0.06) 50%, rgba(185,28,28,0) 100%)",
-      iconColor: "text-red-500",
+      gradient: "radial-gradient(circle, rgba(97,218,251,0.15) 0%, rgba(97,218,251,0.06) 50%, rgba(97,218,251,0) 100%)",
+      iconColor: "text-accent",
     },
   ];
 
@@ -85,18 +84,16 @@ export function Header() {
     <header 
       className="fixed top-0 left-0 right-0 z-50 py-6 pointer-events-none transition-all duration-300"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-20 flex justify-between items-center pointer-events-auto">
+      <div className="container-base flex justify-between items-center pointer-events-auto">
         {/* Logo with Bubble Style */}
         <a href="#home" className="group relative z-50">
-           <div className={cn(
-             "rounded-2xl bg-gradient-to-b from-background/80 to-background/40 backdrop-blur-lg shadow-lg relative overflow-hidden transition-transform duration-300 hover:scale-105",
-             isScrolled ? "bg-background/80" : "bg-transparent"
-           )}>
-             <div className={`absolute bg-gradient-radial from-transparent ${
-                isDark
-                  ? "via-blue-400/30 via-30% via-purple-400/30 via-60% via-red-400/30 via-90%"
-                  : "via-blue-400/20 via-30% via-purple-400/20 via-60% via-red-400/20 via-90%"
-              } to-transparent rounded-3xl z-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+           <div 
+             className={cn(
+               "rounded-2xl backdrop-blur-lg border border-glass shadow-lg relative overflow-hidden transition-transform duration-300 hover:scale-105",
+               isScrolled ? "[background:var(--glass-primary)]" : "bg-transparent"
+             )
+           }>
+             <div className={`absolute bg-gradient-radial from-transparent via-accent/20 to-transparent rounded-3xl z-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
              
                 <img src={logoSrc} alt="Logo" className="h-14 w-14" />
            </div>
@@ -117,11 +114,11 @@ export function Header() {
         </div>
 
         {/* Mobile Menu Button */}
-        <button 
-          onClick={toggleMenu}
-          className="md:hidden text-white z-50 focus:outline-none p-2 rounded-2xl bg-black/20 backdrop-blur-lg border-none min-w-14 min-h-14 flex items-center justify-center"
-          aria-label="Toggle menu"
-        >
+         <button 
+           onClick={toggleMenu}
+           className="md:hidden text-white z-50 focus:outline-none p-2 rounded-2xl backdrop-blur-lg border border-glass min-w-14 min-h-14 flex items-center justify-center [background:var(--glass-primary)]"
+           aria-label="Toggle menu"
+         >
           <div className="space-y-1.5">
             <span className={`block w-6 h-0.5 bg-white transition-transform duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
             <span className={`block w-6 h-0.5 bg-white transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
@@ -130,10 +127,10 @@ export function Header() {
         </button>
 
         {/* Mobile Navigation Overlay */}
-        <div className={`fixed inset-0 flex flex-col items-center justify-center gap-8 transition-all duration-300 md:hidden pointer-events-auto ${
-          isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
-        }`}>
-          <div className="w-full max-w-sm px-4 py-20 h-screen bg-gradient-to-b from-background/80 to-background/40 backdrop-blur-lg shadow-lg">
+         <div className={`fixed inset-0 flex flex-col items-center justify-center gap-8 transition-all duration-300 md:hidden pointer-events-auto ${
+           isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
+         }`}>
+           <div className="w-full max-w-sm px-4 py-20 h-screen backdrop-blur-lg shadow-lg border-r border-glass [background:var(--glass-primary)]">
             <MenuBar 
               items={menuItems} 
               activeItem={activeSection} 

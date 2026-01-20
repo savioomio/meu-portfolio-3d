@@ -39,15 +39,15 @@ export function SkillsCarousel() {
   const columnCount = isMobile ? 3 : 4
 
   return (
-    <section id="skills" className="py-10 bg-background min-h-screen flex items-center justify-center">
-      <div className="mx-auto flex w-full max-w-screen-lg flex-col items-center px-3">
-        <div className="text-center mb-10">
-          <h2 className="tracking-tight pb-3 text-5xl sm:text-6xl lg:text-[6rem] font-bold text-white">
+    <section id="skills" className="section-padding min-h-screen flex items-center justify-center relative z-10">
+      <div className="container-base w-full flex flex-col items-center">
+        <div className="text-center mb-12">
+          <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
             Tech Stack
           </h2>
-          <h3 className="tracking-tight pb-3 text-white text-2xl sm:text-3xl lg:text-4xl font-thin ">
+          <p className="font-body text-text-secondary text-lg sm:text-xl lg:text-2xl font-light max-w-3xl mx-auto">
             Ferramentas e tecnologias que utilizo para transformar ideias em código.
-          </h3>
+          </p>
         </div>
 
         <LogoCarousel columnCount={columnCount} logos={allLogos} /> 

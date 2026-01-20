@@ -14,7 +14,7 @@ const Contact = lazy(() => import('./components/Contact').then(module => ({ defa
 
 function App() {
   return (
-    <div className="bg-black min-h-screen text-slate-100 selection:bg-cyan-500/30 selection:text-white font-sans">
+    <div className="bg-black min-h-screen text-text-primary selection:bg-accent-soft selection:text-white font-body">
       <Header />
       <ConstructionPopup />
       

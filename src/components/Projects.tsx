@@ -18,10 +18,10 @@ export function Projects() {
   ]
 
   return (
-    <section id="projects" className="py-20 flex flex-col items-center p-6 relative z-10">
-       <div className="max-w-6xl w-full">
-          <h2 className="text-4xl font-bold text-white mb-12 flex items-center gap-4">
-             <span className="w-2 h-8 bg-purple-500 rounded-full"></span>
+    <section id="projects" className="section-padding flex flex-col items-center relative z-10">
+       <div className="container-base w-full">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-12 flex items-center gap-4">
+             <span className="w-2 h-10 bg-accent rounded-full"></span>
              Mission Log (Projetos)
           </h2>
 
@@ -29,21 +29,21 @@ export function Projects() {
             {projects.map((p, i) => (
               <div 
                 key={i}
-                className="bg-slate-900/40 backdrop-blur-sm border border-slate-800 p-8 rounded-xl hover:border-purple-500/50 hover:bg-slate-900/60 transition-all duration-300 group"
+                className="glass-card p-8 hover:border-accent/50 transition-all duration-300 group cursor-pointer"
               >
-                 <div className="h-40 bg-slate-800/50 rounded-lg mb-6 flex items-center justify-center overflow-hidden relative">
+                 <div className="h-40 bg-glass-primary rounded-lg mb-6 flex items-center justify-center overflow-hidden relative border border-glass">
                     {/* Placeholder Image Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"></div>
-                    <span className="text-slate-600 font-mono text-sm border border-slate-700 px-3 py-1 rounded">No Image Signal</span>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+                    <span className="text-text-disabled font-body text-sm border border-glass px-3 py-1 rounded relative z-10">No Image Signal</span>
                  </div>
                  
-                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
+                 <h3 className="font-heading text-xl font-bold text-white mb-3 group-hover:text-accent transition-colors">
                    {p.title}
                  </h3>
-                 <p className="text-slate-400 text-sm mb-4 leading-relaxed">
+                 <p className="text-text-secondary font-body text-sm mb-6 leading-relaxed">
                    {p.desc}
                  </p>
-                 <div className="text-xs font-mono text-cyan-400 pt-4 border-t border-slate-800">
+                 <div className="text-xs font-body text-accent pt-4 border-t border-glass">
                    {p.tech}
                  </div>
               </div>

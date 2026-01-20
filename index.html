@@ -119,20 +119,20 @@
   <body>
     <div id="root">
       <style>
-        /* Critical CSS for the loader */
+        /* Critical CSS for the loader - DESIGN SYSTEM */
         #loader-wrapper {
           position: fixed;
           top: 0;
           left: 0;
           width: 100%;
           height: 100%;
-          background: #1a1a1a;
+          background: #000000;
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
           z-index: 9999;
-          font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+          font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
           overflow: hidden;
         }
         
@@ -176,9 +176,9 @@
           transform: translate(-50%, -50%);
           width: 16px;
           height: 16px;
-          background: #646cff;
+          background: #61DAFB;
           border-radius: 50%;
-          box-shadow: 0 0 15px #646cff;
+          box-shadow: 0 0 15px #61DAFB, 0 0 30px rgba(97, 218, 251, 0.45);
         }
 
         .orbit {
@@ -187,7 +187,7 @@
           left: 50%;
           width: 100%;
           height: 100%;
-          border: 1px solid rgba(100, 108, 255, 0.3);
+          border: 1px solid rgba(97, 218, 251, 0.3);
           border-radius: 50%;
           animation: spin 2s linear infinite;
         }
@@ -195,13 +195,13 @@
           width: 70%;
           height: 70%;
           animation: spin-reverse 1.5s linear infinite;
-          border-color: rgba(100, 108, 255, 0.5);
+          border-color: rgba(97, 218, 251, 0.5);
         }
         .orbit:nth-child(3) {
           width: 130%;
           height: 130%;
           animation: spin 3s linear infinite;
-          border-color: rgba(100, 108, 255, 0.2);
+          border-color: rgba(97, 218, 251, 0.2);
         }
 
         .orbit::before {
@@ -212,27 +212,29 @@
           transform: translateX(-50%);
           width: 6px;
           height: 6px;
-          background: #fff;
+          background: #61DAFB;
           border-radius: 50%;
-          box-shadow: 0 0 10px #fff;
+          box-shadow: 0 0 10px #61DAFB;
         }
         
         .loading-text {
           font-size: 1.5rem;
-          color: #fff;
+          color: #E5E7EB;
           font-weight: 300;
           letter-spacing: 4px;
           text-transform: uppercase;
           animation: fadePulse 2s infinite;
+          font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
         }
         
         .loading-subtext {
           margin-top: 10px;
           font-size: 0.9rem;
-          color: rgba(255, 255, 255, 0.5);
+          color: #9CA3AF;
           font-weight: 300;
           text-align: center;
           padding-inline: 20px;
+          font-family: 'Inter', sans-serif;
         }
 
         @keyframes spin { 0% { transform: translate(-50%, -50%) rotate(0deg); } 100% { transform: translate(-50%, -50%) rotate(360deg); } }
