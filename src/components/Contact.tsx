@@ -38,7 +38,7 @@ export function Contact() {
             </a>
          </div>
          
-         <div className="mt-20 text-xs font-body text-text-disabled">
+         <div className="mt-20 text-xs font-body text-text-secondary">
            © 2026 Sávio Pessôa Afonso. All systems nominal.
          </div>
       </div>

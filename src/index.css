@@ -5,8 +5,100 @@
    Estilo: Futurista • Minimalista • High-Tech
    ============================================ */
 
-/* Importar fontes do Google */
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+/* ============================================
+   FONTES LOCAIS (WOFF2) - PERFORMANCE OTIMIZADA
+   Space Grotesk + Inter hospedadas localmente
+   ============================================ */
+
+/* Space Grotesk - Light 300 */
+@font-face {
+  font-display: swap;
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/space-grotesk/space-grotesk-v22-latin-300.woff2') format('woff2');
+}
+
+/* Space Grotesk - Regular 400 */
+@font-face {
+  font-display: swap;
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/space-grotesk/space-grotesk-v22-latin-regular.woff2') format('woff2');
+}
+
+/* Space Grotesk - Medium 500 */
+@font-face {
+  font-display: swap;
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/space-grotesk/space-grotesk-v22-latin-500.woff2') format('woff2');
+}
+
+/* Space Grotesk - SemiBold 600 */
+@font-face {
+  font-display: swap;
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/space-grotesk/space-grotesk-v22-latin-600.woff2') format('woff2');
+}
+
+/* Space Grotesk - Bold 700 */
+@font-face {
+  font-display: swap;
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/space-grotesk/space-grotesk-v22-latin-700.woff2') format('woff2');
+}
+
+/* Inter - Light 300 */
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/inter/inter-v20-latin-300.woff2') format('woff2');
+}
+
+/* Inter - Regular 400 */
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/inter/inter-v20-latin-regular.woff2') format('woff2');
+}
+
+/* Inter - Medium 500 */
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/inter/inter-v20-latin-500.woff2') format('woff2');
+}
+
+/* Inter - SemiBold 600 */
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/inter/inter-v20-latin-600.woff2') format('woff2');
+}
+
+/* Inter - Bold 700 */
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/inter/inter-v20-latin-700.woff2') format('woff2');
+}
 
 @tailwind base;
 @tailwind components;

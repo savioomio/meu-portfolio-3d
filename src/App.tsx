@@ -1,8 +1,8 @@
 import { Suspense, lazy } from 'react'
 
 
+
 import { Header } from './components/Header'
-import { ConstructionPopup } from './components/ConstructionPopup'
 import { Hero } from './components/Hero'
 
 // Lazy Loading Components (Deferred)
@@ -16,7 +16,6 @@ function App() {
   return (
     <div className="bg-black min-h-screen text-text-primary selection:bg-accent-soft selection:text-white font-body">
       <Header />
-      <ConstructionPopup />
       
       <Suspense fallback={<div className="fixed inset-0 z-0 bg-black" />}>
          <ThreeBackground />
