@@ -1,6 +1,6 @@
 "use client"
 
-import { LogoCarousel } from "@/components/ui/logoCarousel"
+import { LogoCarousel } from "@/components/ui/LogoCarousel"
 import { useIsMobile } from "@/hooks/useIsMobile"
 import BootstrapLogo from "@/components/assets/logos/bootstrap.svg?react"
 import DjangoLogo from "@/components/assets/logos/django.svg?react"

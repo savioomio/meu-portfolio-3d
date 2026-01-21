@@ -1,55 +1,60 @@
+import { FocusRail, type FocusRailItem } from "./ui/FocusRail";
+
 export function Projects() {
-  const projects = [
+  const projects: FocusRailItem[] = [
     { 
+      id: 1,
       title: 'E-commerce Platform', 
-      desc: 'Plataforma completa de vendas online com integração de pagamentos e gestão de estoque.',
-      tech: 'React • TypeScript • Stripe' 
+      description: 'Plataforma completa de vendas online com integração de pagamentos e gestão de estoque.',
+      tech: 'React • TypeScript • Stripe',
+      meta: 'Full-Stack • E-commerce',
+      imageSrcDesktop: '/projects/ecommerce-desktop.png',
+      imageSrcMobile: '/projects/ecommerce-mobile.png',
+      href: 'https://github.com/savioomio' // Substitua pelo link real do projeto
     },
     { 
+      id: 2,
       title: 'Task Management App', 
-      desc: 'Sistema de produtividade para equipes com funcionalidades de tempo real.',
-      tech: 'Next.js • Prisma • PostgreSQL' 
+      description: 'Sistema de produtividade para equipes com funcionalidades de tempo real.',
+      tech: 'Next.js • Prisma • PostgreSQL',
+      meta: 'Productivity • Real-time',
+      imageSrcDesktop: '/projects/task-management-desktop.png',
+      imageSrcMobile: '/projects/task-management-mobile.png',
+      href: 'https://github.com/savioomio' // Substitua pelo link real do projeto
     },
     { 
+      id: 3,
       title: '3D Portfolio Website', 
-      desc: 'Este site! Uma experiência imersiva combinando performance web e gráficos 3D.',
-      tech: 'React Three Fiber • GSAP' 
+      description: 'Este site! Uma experiência imersiva combinando performance web e gráficos 3D.',
+      tech: 'React Three Fiber • GSAP • Framer Motion',
+      meta: 'Portfolio • 3D Graphics',
+      imageSrcDesktop: '/projects/portfolio-3d-desktop.png',
+      imageSrcMobile: '/projects/portfolio-3d-mobile.png',
+      href: 'https://github.com/savioomio/meu-portfolio-3d'
     }
   ]
 
   return (
     <section id="projects" className="section-padding flex flex-col items-center relative z-10">
-       <div className="container-base w-full">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-12 flex items-center gap-4">
+       {/* Title and Description with Container */}
+       <div className="container-base w-full mb-12">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-8 flex items-center gap-4">
              <span className="w-2 h-10 bg-accent rounded-full"></span>
              Mission Log (Projetos)
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((p, i) => (
-              <div 
-                key={i}
-                className="glass-card p-8 hover:border-accent/50 transition-all duration-300 group cursor-pointer"
-              >
-                 <div className="h-40 bg-glass-primary rounded-lg mb-6 flex items-center justify-center overflow-hidden relative border border-glass">
-                    {/* Placeholder Image Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
-                    <span className="text-text-disabled font-body text-sm border border-glass px-3 py-1 rounded relative z-10">No Image Signal</span>
-                 </div>
-                 
-                 <h3 className="font-heading text-xl font-bold text-white mb-3 group-hover:text-accent transition-colors">
-                   {p.title}
-                 </h3>
-                 <p className="text-text-secondary font-body text-sm mb-6 leading-relaxed">
-                   {p.desc}
-                 </p>
-                 <div className="text-xs font-body text-accent pt-4 border-t border-glass">
-                   {p.tech}
-                 </div>
-              </div>
-            ))}
-          </div>
+          <p className="text-text-secondary font-body text-center max-w-2xl mx-auto">
+            Navegue pelo carrossel usando as setas, mouse wheel, ou arraste os cards para explorar os projetos.
+          </p>
        </div>
+
+       {/* FocusRail 3D Carousel - Full Width */}
+       <FocusRail 
+         items={projects} 
+         autoPlay={false} 
+         loop={true}
+         className="w-full"
+       />
     </section>
   )
 }

@@ -41,7 +41,7 @@ const StarShaderMaterial = {
 
 export function WarpStars() {
   const isMobile = useIsMobile()
-  const count = isMobile ? 1000 : 3000
+  const count = isMobile ? 2000 : 3000
   const meshRef = useRef<THREE.Points>(null)
   const travelRef = useRef(0)
   
@@ -64,8 +64,8 @@ export function WarpStars() {
     if (!meshRef.current) return
     
     // Ler Native Scroll do window (muito mais leve que Drei ScrollControls para mobile)
-    // Divisor 500 suaviza a velocidade (quanto menor, mais rápido voa)
-    const targetTravel = window.scrollY / 5 
+    // Divisor suaviza a velocidade (quanto menor, mais rápido voa)
+    const targetTravel = window.scrollY / 30 
     
     // Lerp suave para não ficar "duro"
     travelRef.current = THREE.MathUtils.lerp(travelRef.current, targetTravel, 0.1)
