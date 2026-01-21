@@ -1,6 +1,6 @@
 "use client"
 
-import { LogoCarousel } from "@/components/ui/LogoCarousel"
+import { TechShowcase } from "@/components/ui/TechShowcase"
 import { useIsMobile } from "@/hooks/useIsMobile"
 import BootstrapLogo from "@/components/assets/logos/bootstrap.svg?react"
 import DjangoLogo from "@/components/assets/logos/django.svg?react"
@@ -50,7 +50,7 @@ export function SkillsCarousel() {
           </p>
         </div>
 
-        <LogoCarousel columnCount={columnCount} logos={allLogos} /> 
+        <TechShowcase columnCount={columnCount} logos={allLogos} /> 
       </div>
     </section>
   )
