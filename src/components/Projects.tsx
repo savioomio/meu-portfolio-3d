@@ -38,7 +38,7 @@ export function Projects() {
     <section id="projects" className="section-padding flex flex-col items-center relative z-10">
        {/* Title and Description with Container */}
        <div className="container-base w-full mb-12">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-8 flex items-center gap-4">
+          <h2 className="font-heading text-3xl lg:text-4xl font-bold text-white mb-8 flex items-center gap-4">
              <span className="w-2 h-10 bg-accent rounded-full"></span>
              Mission Log (Projetos)
           </h2>

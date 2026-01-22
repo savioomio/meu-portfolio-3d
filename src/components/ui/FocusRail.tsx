@@ -176,7 +176,7 @@ export function FocusRail({
               <motion.div
                 key={absIndex}
                 className={cn(
-                  "absolute w-[260px] md:w-[480px] rounded-2xl border border-glass bg-glass-secondary shadow-2xl transition-shadow duration-300 backdrop-blur-md",
+                  "absolute w-[260px] lg:w-[480px] rounded-2xl border border-glass bg-glass-secondary shadow-2xl transition-shadow duration-300 backdrop-blur-md",
                   isMobile ? "aspect-[3/4]" : "aspect-video",
                   isCenter ? "z-20 shadow-accent-glow/20 border-accent/30" : "z-10"
                 )}
@@ -212,8 +212,8 @@ export function FocusRail({
         </motion.div>
 
         {/* Info & Controls - Design System Integration with Padding */}
-        <div className="mx-auto mt-12 flex w-full container-base flex-col items-center justify-between gap-6 md:flex-row pointer-events-auto ">
-          <div className="flex flex-1 flex-col items-center text-center md:items-start md:text-left h-32 justify-center">
+        <div className="mx-auto mt-12 flex w-full container-base flex-col items-center justify-between gap-6 lg:flex-row pointer-events-auto ">
+          <div className="flex flex-1 flex-col items-center text-center lg:items-start lg:text-left h-32 justify-center">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem.id}
@@ -228,7 +228,7 @@ export function FocusRail({
                     {activeItem.meta}
                   </span>
                 )}
-                <h2 className="text-3xl font-heading font-bold tracking-tight md:text-4xl text-text-primary">
+                <h2 className="text-3xl font-heading font-bold tracking-tight lg:text-4xl text-text-primary">
                   {activeItem.title}
                 </h2>
                 {activeItem.description && (

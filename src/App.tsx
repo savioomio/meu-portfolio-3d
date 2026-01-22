@@ -8,7 +8,7 @@ import { Hero } from './components/Hero'
 // Lazy Loading Components (Deferred)
 const SkillsCarousel = lazy(() => import('./components/SkillsCarousel').then(module => ({ default: module.SkillsCarousel })))
 const ThreeBackground = lazy(() => import('./components/ThreeBackground'))
-const About = lazy(() => import('./components/About').then(module => ({ default: module.About })))
+const Experience = lazy(() => import('./components/Experience').then(module => ({ default: module.Experience })))
 const Projects = lazy(() => import('./components/Projects').then(module => ({ default: module.Projects })))
 const Contact = lazy(() => import('./components/Contact').then(module => ({ default: module.Contact })))
 
@@ -24,7 +24,7 @@ function App() {
       <main className="relative z-10">
          <Hero />
          <Suspense fallback={<div className="h-screen" />}>
-            <About />
+            <Experience />
             <SkillsCarousel />
             <Projects />
             <Contact />

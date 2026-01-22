@@ -50,7 +50,7 @@ const LogoColumn: React.FC<LogoColumnProps> = React.memo(
 
     return (
       <motion.li
-        className="relative h-14 w-24 overflow-hidden md:h-24 md:w-48"
+        className="relative h-14 w-24 overflow-hidden lg:h-24 lg:w-48"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -89,7 +89,7 @@ const LogoColumn: React.FC<LogoColumnProps> = React.memo(
             }}
           >
             <CurrentLogo 
-              className="h-20 w-20 max-h-[80%] max-w-[80%] object-contain md:h-32 md:w-32" 
+              className="h-20 w-20 max-h-[80%] max-w-[80%] object-contain lg:h-32 lg:w-32" 
               aria-label={logos[currentIndex].name}
             />
           </motion.div>

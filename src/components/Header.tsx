@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Home, User, Cpu, Briefcase, Mail } from 'lucide-react';
+import { Home, Clock, Cpu, Briefcase, Mail } from 'lucide-react';
 import { MenuBar } from '@/components/ui/GlowMenu';
 import type { MenuItem } from '@/components/ui/GlowMenu';
 
@@ -23,9 +23,9 @@ export function Header() {
       iconColor: "text-accent",
     },
     {
-      icon: User,
-      label: 'Sobre',
-      href: '#about',
+      icon: Clock,
+      label: 'Experiência',
+      href: '#experience',
       gradient: "radial-gradient(circle, rgba(97,218,251,0.15) 0%, rgba(97,218,251,0.06) 50%, rgba(97,218,251,0) 100%)",
       iconColor: "text-accent",
     },
@@ -100,7 +100,7 @@ export function Header() {
         </a>
 
         {/* Desktop Navigation - Glow Menu */}
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <MenuBar 
             items={menuItems} 
             activeItem={activeSection} 
@@ -116,7 +116,7 @@ export function Header() {
         {/* Mobile Menu Button */}
          <button 
            onClick={toggleMenu}
-           className="md:hidden text-white z-50 focus:outline-none p-2 rounded-2xl backdrop-blur-lg border border-glass min-w-14 min-h-14 flex items-center justify-center [background:var(--glass-primary)]"
+           className="lg:hidden text-white z-50 focus:outline-none p-2 rounded-2xl backdrop-blur-lg border border-glass min-w-14 min-h-14 flex items-center justify-center [background:var(--glass-primary)]"
            aria-label="Toggle menu"
          >
           <div className="space-y-1.5">
@@ -127,7 +127,7 @@ export function Header() {
         </button>
 
         {/* Mobile Navigation Overlay */}
-         <div className={`fixed inset-0 flex flex-col items-center justify-center gap-8 transition-all duration-300 md:hidden pointer-events-auto ${
+         <div className={`fixed inset-0 flex flex-col items-center justify-center gap-8 transition-all duration-300 lg:hidden pointer-events-auto ${
            isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
          }`}>
            <div className="w-full max-w-sm px-4 py-20 h-screen backdrop-blur-lg shadow-lg border-r border-glass [background:var(--glass-primary)]">

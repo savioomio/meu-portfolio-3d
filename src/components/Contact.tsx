@@ -2,7 +2,7 @@ export function Contact() {
   return (
     <footer id="contact" className="section-padding glass-header relative z-10">
       <div className="container-medium text-center">
-         <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-8">Iniciar Transmissão</h2>
+         <h2 className="font-heading text-3xl lg:text-4xl font-bold text-white mb-8">Iniciar Transmissão</h2>
          <p className="text-text-secondary font-body mb-12 max-w-lg mx-auto leading-relaxed">
            Tem um projeto em mente ou quer apenas trocar uma ideia sobre tecnologia e o universo?
          </p>

@@ -335,7 +335,6 @@ box-shadow: 0 0 20px rgba(97, 218, 251, 0.45);
 ### NÃO Alterar
 
 - ✋ Fundo 3D espacial (Three.js)
-- ✋ Componente `logoCarousel.tsx`
 
 ### Pode Alterar
 
