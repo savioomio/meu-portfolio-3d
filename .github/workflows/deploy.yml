@@ -25,10 +25,9 @@ jobs:
           port: 22
           source: "."
           target: ${{ secrets.STAGING_TARGET_PATH }}
-          rm: true # Limpa a pasta antes de copiar (evita arquivos velhos)
-          timeout: 5m # Aumenta timeout de 1min para 5min
-          command_timeout: 10m # Timeout para comandos individuais
-          debug: true # Ativa modo debug para ver detalhes da conexão
+          rm: true
+          timeout: 5m
+          command_timeout: 10m
 
       - name: 3. Executando comandos em Staging
         uses: appleboy/ssh-action@master
@@ -69,10 +68,9 @@ jobs:
           port: 22
           source: "."
           target: ${{ secrets.PRODUCTION_TARGET_PATH }}
-          rm: true # Limpa a pasta antes de copiar (evita arquivos velhos como Dock.tsx)
-          timeout: 5m # Aumenta timeout de 1min para 5min
-          command_timeout: 10m # Timeout para comandos individuais
-          debug: true # Ativa modo debug para ver detalhes da conexão
+          rm: true
+          timeout: 5m
+          command_timeout: 10m
 
       - name: 3. Executando comandos em Produção
         uses: appleboy/ssh-action@master

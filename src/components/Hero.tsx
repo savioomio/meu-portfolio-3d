@@ -29,7 +29,7 @@ export function Hero() {
                 <picture>
                     <source 
                         media="(max-width: 768px)" 
-                        srcSet="/capa_portifolio_mob.webp?v=2" 
+                        srcSet="/capa_portifolio_mob.webp" 
                         type="image/webp"
                         width="500"
                         height="500"
