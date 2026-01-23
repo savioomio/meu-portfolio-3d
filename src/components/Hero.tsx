@@ -25,32 +25,48 @@ export function Hero() {
         
         {/* Profile Image - Glass Container */}
         <div className="order-1 lg:order-2 flex justify-center relative">
-            {/* Decorative Rings */}
-            <div className="absolute inset-0 border border-accent/20 rounded-full scale-105 animate-pulse"></div>
-            <div className="absolute inset-0 border border-accent/10 rounded-full scale-125 delay-75"></div>
             
-            <div className="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-glass backdrop-blur-sm bg-glass-secondary shadow-glow-accent">
+            <div className="relative overflow-hidden">
                 <picture>
-                    <source media="(max-width: 768px)" srcSet="/capa_portifolio_mob.webp" />
-                    <source media="(min-width: 769px)" srcSet="/capa_portifolio.webp" />
+                    {/* Mobile: 500x500px, 55 KB */}
+                    <source 
+                        media="(max-width: 768px)" 
+                        srcSet="/capa_portifolio_mob.webp" 
+                        type="image/webp"
+                        width="500"
+                        height="500"
+                    />
+                    {/* Desktop: 800x800px, 109 KB */}
+                    <source 
+                        media="(min-width: 769px)" 
+                        srcSet="/capa_portifolio_desk.webp" 
+                        type="image/webp"
+                        width="800"
+                        height="800"
+                    />
+                    {/* Fallback */}
                     <img 
-                        src="/capa_portifolio.webp" 
+                        src="/capa_portifolio_desk.webp" 
                         alt="Sávio Profile" 
-                        width={434}
-                        height={434}
+                        width={800}
+                        height={800}
                         loading="eager"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                     />
                 </picture>
+                <div 
+                    className="block absolute inset-0 pointer-events-none"
+                    style={{
+                        background: `
+                            linear-gradient(to bottom, rgba(0,0,0,1) 0%, transparent 15%),
+                            linear-gradient(to top, rgba(0,0,0,1) 0%, transparent 15%),
+                            linear-gradient(to right, rgba(0,0,0,1) 0%, transparent 15%),
+                            linear-gradient(to left, rgba(0,0,0,1) 0%, transparent 15%)
+                        `
+                    }}
+                />
             </div>
         </div>
-        
-      </div>
-      
-      {/* Scroll Indicator */}
-      <div className="hidden lg:flex absolute bottom-10 animate-bounce text-text-disabled text-sm font-body font-light tracking-widest flex-col items-center gap-2">
-        SCROLL TO EXPLORE
-        <div className="w-[1px] h-12 bg-gradient-to-b from-accent to-transparent"></div>
       </div>
     </section>
   )
