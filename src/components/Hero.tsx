@@ -23,20 +23,17 @@ export function Hero() {
             </p>
         </div>
         
-        {/* Profile Image - Glass Container */}
         <div className="order-1 lg:order-2 flex justify-center relative">
             
             <div className="relative overflow-hidden">
                 <picture>
-                    {/* Mobile: 500x500px, 55 KB */}
                     <source 
                         media="(max-width: 768px)" 
-                        srcSet="/capa_portifolio_mob.webp" 
+                        srcSet="/capa_portifolio_mob.webp?v=2" 
                         type="image/webp"
                         width="500"
                         height="500"
                     />
-                    {/* Desktop: 800x800px, 109 KB */}
                     <source 
                         media="(min-width: 769px)" 
                         srcSet="/capa_portifolio_desk.webp" 
@@ -44,7 +41,6 @@ export function Hero() {
                         width="800"
                         height="800"
                     />
-                    {/* Fallback */}
                     <img 
                         src="/capa_portifolio_desk.webp" 
                         alt="Sávio Profile" 
