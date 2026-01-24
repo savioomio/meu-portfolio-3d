@@ -10,14 +10,13 @@ export default {
       fontFamily: {
         heading: ['Space Grotesk', 'system-ui', 'sans-serif'],
         body: ['Inter', 'system-ui', 'sans-serif'],
-        sans: ['Inter', 'system-ui', 'sans-serif'], // Default
+        sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       
       // Paleta de cores do Design System
       colors: {
-        // Accent principal - cyan tecnológico #61DAFB
         accent: {
-          DEFAULT: '#61DAFB',
+          DEFAULT: '#48c9ea',
           hover: '#8BE6FF',
           soft: 'rgba(97, 218, 251, 0.25)',
           glow: 'rgba(97, 218, 251, 0.45)',

@@ -112,21 +112,21 @@
   --font-heading: 'Space Grotesk', system-ui, sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
   
-  /* Cores - Accent */
-  --accent: #61DAFB;
-  --accent-hover: #8BE6FF;
-  --accent-soft: rgba(97, 218, 251, 0.25);
-  --accent-glow: rgba(97, 218, 251, 0.45);
+  /* Cores - Accent (Sync via Tailwind Config) */
+  --accent: theme('colors.accent.DEFAULT');
+  --accent-hover: theme('colors.accent.hover');
+  --accent-soft: theme('colors.accent.soft');
+  --accent-glow: theme('colors.accent.glow');
   
   /* Cores - Glass Morphism */
-  --glass-primary: rgba(10, 15, 25, 0.55);
-  --glass-secondary: rgba(17, 25, 40, 0.60);
-  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-primary: theme('colors.glass.primary');
+  --glass-secondary: theme('colors.glass.secondary');
+  --glass-border: theme('colors.glass.border');
   
   /* Cores - Texto */
-  --text-primary: #E5E7EB;
-  --text-secondary: #9CA3AF;
-  --text-disabled: #6B7280;
+  --text-primary: theme('colors.text.primary');
+  --text-secondary: theme('colors.text.secondary');
+  --text-disabled: theme('colors.text.disabled');
   
   /* Base */
   --bg-base: #000000;
