@@ -1,5 +1,5 @@
 import { Footer } from "./ui/FooterContent";
-import { Linkedin, Github, Instagram, Mail, Terminal } from "lucide-react";
+import { Linkedin, Github, Instagram, Mail } from "lucide-react";
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
   <svg
