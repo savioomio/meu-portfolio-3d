@@ -35,7 +35,7 @@ export const Footer = ({
     <section className={cn("relative w-full mt-0", className)}>
       <footer className="relative font-body">
         <div className="container-base flex flex-col justify-end mx-auto h-screen relative py-10">
-          <div className="flex flex-col mb-12 lg:mb-20 md:mb-0 w-full absolute lg:top-2/4 top-1/2 max-lg:-translate-y-1/2 left-1/2 transform -translate-x-1/2">
+          <div className="flex flex-col mb-12 lg:mb-20 md:mb-0 w-full absolute lg:top-1/2 top-[55vh] -translate-y-1/2 left-1/2 transform -translate-x-1/2">
             <div className="w-full flex flex-col items-center">
               <div className="space-y-2 flex flex-col items-center flex-1 px-6 lg:px-0">
                 <div className="flex items-center gap-2">
@@ -107,7 +107,7 @@ export const Footer = ({
 
         {/* Large background text */}
         <div 
-          className="bg-gradient-to-b from-text-primary/10 via-text-primary/10 to-transparent bg-clip-text text-transparent leading-none absolute left-1/2 -translate-x-1/2 bottom-40 lg:bottom-32 font-heading font-extrabold tracking-tighter pointer-events-none select-none text-center container-base text-[12vh] lg:text-[24vh]"
+          className="bg-gradient-to-b from-text-primary/10 via-text-primary/10 to-transparent bg-clip-text text-transparent leading-none absolute left-1/2 -translate-x-1/2 max-lg:top-20 lg:bottom-32 font-heading font-extrabold tracking-tighter pointer-events-none select-none text-center container-base text-[12vh] lg:text-[24vh]"
           style={{
             width: '100%'
           }}

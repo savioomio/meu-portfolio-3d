@@ -130,7 +130,7 @@ export function Header() {
          <div className={`fixed inset-0 flex flex-col items-center justify-center gap-8 transition-all duration-300 lg:hidden pointer-events-auto ${
            isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
          }`}>
-           <div className="w-full max-w-sm px-4 py-20 h-screen backdrop-blur-lg shadow-lg border-r border-glass [background:var(--glass-primary)]">
+           <div className="w-full px-4 py-20 h-screen backdrop-blur-lg shadow-lg border-r border-glass [background:var(--glass-primary)]">
             <MenuBar 
               items={menuItems} 
               activeItem={activeSection} 
