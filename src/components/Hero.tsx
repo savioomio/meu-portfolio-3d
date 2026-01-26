@@ -1,10 +1,8 @@
-import { ArrowRight, Code2, Users, Briefcase } from 'lucide-react';
-
 export function Hero() {
   const stats = [
-    { label: "Anos de experiência", value: "+2", icon: Code2 },
-    { label: "Total de projetos entregues", value: "+22", icon: Briefcase },
-    { label: "Projetos com participação ativa", value: "+15", icon: Users },
+    { label: "Anos de experiência", value: "+2" },
+    { label: "Total de projetos entregues", value: "+22" },
+    { label: "Projetos com participação ativa", value: "+15" },
   ];
 
   return (
