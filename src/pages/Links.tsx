@@ -75,7 +75,7 @@ export function Links() {
 
       {/* Back Button */}
       <div className="absolute top-6 left-6 z-20">
-        <Link to="/" className="text-white/50 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 flex items-center justify-center">
+        <Link to="/" aria-label="Voltar para Home" className="text-white/50 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 flex items-center justify-center">
             <ArrowLeft className="w-6 h-6" />
         </Link>
       </div>
