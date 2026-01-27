@@ -48,7 +48,7 @@ export function Contact() {
         brandDescription="Tem um projeto em mente ou apenas quer trocar uma ideia sobre tecnologia?"
         socialLinks={socialLinks}
         creatorName="Sávio Pessôa Afonso"
-        creatorUrl="https://linkedin.com/in/savioomio"
+        creatorUrl="/links"
       />
     </div>
   );
