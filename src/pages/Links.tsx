@@ -1,6 +1,7 @@
 import { Suspense, lazy } from 'react'
 import { Linkedin, Github, Instagram, Mail, Globe, ArrowLeft } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
 const ThreeBackground = lazy(() => import('../components/ThreeBackground'))
 
@@ -61,7 +62,13 @@ export function Links() {
 
   return (
     <div className="bg-black min-h-screen text-text-primary font-body relative overflow-hidden">
-      
+      <Helmet>
+        <title>Sávio Pessôa | Links Úteis</title>
+        <link rel="canonical" href="https://savioomiodev.com.br/links" />
+        <meta name="title" content="Sávio Pessôa | Links Úteis" />
+        <meta name="description" content="Conecte-se comigo! Acesse meu portfólio completo, redes sociais e entre em contato direto pelo WhatsApp." />
+      </Helmet>
+
       <Suspense fallback={<div className="fixed inset-0 z-0 bg-black" />}>
          <ThreeBackground />
       </Suspense>

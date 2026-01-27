@@ -1,4 +1,5 @@
 import { Suspense, lazy } from 'react'
+import { Helmet } from 'react-helmet-async'
 
 import { Header } from '../components/Header'
 import { Hero } from '../components/Hero'
@@ -13,6 +14,13 @@ const Contact = lazy(() => import('../components/Contact').then(module => ({ def
 export function Home() {
   return (
     <div className="bg-black min-h-screen text-text-primary selection:bg-accent-soft selection:text-white font-body">
+      <Helmet>
+        <title>Sávio Pessôa | Especialista E-commerce VTEX & Wake</title>
+        <link rel="canonical" href="https://savioomiodev.com.br/" />
+        <meta name="title" content="Sávio Pessôa | Especialista E-commerce VTEX & Wake" />
+        <meta name="description" content="Desenvolvedor Front-End Especialista em E-commerce de Alta Performance. Experiência em projetos para grandes marcas com VTEX e Wake." />
+      </Helmet>
+
       <Header />
       
       <Suspense fallback={<div className="fixed inset-0 z-0 bg-black" />}>
