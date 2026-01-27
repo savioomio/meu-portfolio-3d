@@ -15,11 +15,12 @@ export function Hero() {
             
             <div className="space-y-4">
               <h1 className="text-text-primary font-heading text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight">
-                  Especialista em Front-End para <span className="text-accent text-glow">E-commerce VTEX & Wake</span>
+                Desenvolvedor Front-End com experiência real em
+                <span className="text-accent text-glow"> E-commerce!</span>
               </h1>
-              
+
               <p className="text-text-secondary font-body text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  Desenvolvo interfaces de alta performance que unem design pixel-perfect e velocidade para maximizar conversões em grandes operações.
+                Já desenvolvi e-commerces, sistemas desktop, blogs em WordPress e sites profissionais, sempre com foco em performance e resultado de negócio.
               </p>
             </div>
 
