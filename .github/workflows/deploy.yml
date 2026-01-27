@@ -39,7 +39,7 @@ jobs:
           script: |
             set -e # Para o script se houver erro
             cd $STAGING_TARGET_PATH
-            npm install
+            npm install --legacy-peer-deps
             npm run build
             # Garante que o diretório de destino existe
             mkdir -p $STAGING_WEB_PATH
@@ -82,7 +82,7 @@ jobs:
           script: |
             set -e # Para o script se houver erro
             cd $PRODUCTION_TARGET_PATH
-            npm install
+            npm install --legacy-peer-deps
             npm run build
             # Garante que o diretório de destino existe
             mkdir -p $PRODUCTION_WEB_PATH
