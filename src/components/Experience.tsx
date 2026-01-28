@@ -4,62 +4,63 @@ import { ShoppingCart, Rocket, Zap, Award } from "lucide-react";
 export const Experience = () => {
   const data: TimelineEntry[] = [
     {
-      title: "2020-2022",
+      title: "2021",
       content: (
         <div className="space-y-6">
           <div className="flex items-start gap-3">
             <Zap className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
             <div>
               <h4 className="font-heading text-xl lg:text-2xl font-semibold text-text-primary mb-2">
-                Lorem Ipsum Dolor
+                Técnico em Informática para Internet
               </h4>
               <p className="text-accent text-sm lg:text-base font-medium mb-3">
-                Lorem Ipsum • Dolor Sit Amet
+                IF Baiano • Campus Guanambi
               </p>
             </div>
           </div>
 
           <p className="text-text-secondary text-sm lg:text-base leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt 
-            ut labore et dolore magna aliqua.
+            Em 2021, comecei meu ensino médio integrado com o curso Técnico em Informática para Internet 
+            no Instituto Federal de Educação, Ciência e Tecnologia Baiano. Foi lá que tive meu primeiro 
+            contato significativo com tecnologia, descobrindo minha paixão por desenvolvimento.
           </p>
 
           <div className="space-y-2">
             <div className="flex items-start gap-2 text-text-secondary text-xs lg:text-sm">
               <span className="text-accent">✓</span>
-              <span>Lorem ipsum dolor sit amet consectetur</span>
+              <span>Lógica de Programação</span>
             </div>
             <div className="flex items-start gap-2 text-text-secondary text-xs lg:text-sm">
               <span className="text-accent">✓</span>
-              <span>Adipiscing elit sed do eiusmod tempor</span>
+              <span>Webdesign</span>
             </div>
             <div className="flex items-start gap-2 text-text-secondary text-xs lg:text-sm">
               <span className="text-accent">✓</span>
-              <span>Incididunt ut labore et dolore magna</span>
+              <span>Fundamentos de Informática</span>
             </div>
             <div className="flex items-start gap-2 text-text-secondary text-xs lg:text-sm">
               <span className="text-accent">✓</span>
-              <span>Aliqua ut enim ad minim veniam</span>
+              <span>Fundamentos de Sistemas Operacionais</span>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 mt-6">
-            <div className="p-4 glass-card border border-glass-border rounded-lg backdrop-blur-sm">
+          <div className="flex flex-col lg:flex-row gap-3 mt-6">
+            <div className="p-4 glass-card border border-glass-border rounded-lg backdrop-blur-sm min-w-[200px]">
               <Award className="w-6 h-6 text-accent mb-2" />
-              <p className="text-text-primary text-sm font-medium">Lorem Ipsum</p>
-              <p className="text-text-secondary text-xs mt-1">Dolor Sit Amet</p>
+              <p className="text-text-primary text-sm font-medium">Formação Técnica</p>
+              <p className="text-text-secondary text-xs mt-1">Ensino Médio Integrado</p>
             </div>
-            <div className="p-4 glass-card border border-glass-border rounded-lg backdrop-blur-sm">
+            <div className="p-4 glass-card border border-glass-border rounded-lg backdrop-blur-sm min-w-[200px]">
               <Rocket className="w-6 h-6 text-accent mb-2" />
-              <p className="text-text-primary text-sm font-medium">Consectetur</p>
-              <p className="text-text-secondary text-xs mt-1">+50 adipiscing</p>
+              <p className="text-text-primary text-sm font-medium">Primeiro Contato</p>
+              <p className="text-text-secondary text-xs mt-1">Com Tecnologia</p>
             </div>
           </div>
         </div>
       ),
     },
     {
-      title: "2022-2024",
+      title: "2022",
       content: (
         <div className="space-y-6">
           <div className="flex items-start gap-3">
@@ -112,7 +113,7 @@ export const Experience = () => {
       ),
     },
     {
-      title: "2024-2026",
+      title: "2023",
       content: (
         <div className="space-y-6">
           <div className="flex items-start gap-3">
