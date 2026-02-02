@@ -12,6 +12,7 @@ dist
 context.md
 dist-ssr
 *.local
+img_ops.local.py
 
 # Editor directories and files
 .vscode/*

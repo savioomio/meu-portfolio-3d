@@ -9,11 +9,11 @@ export type FocusRailItem = {
   id: string | number;
   title: string;
   description?: string;
-  imageSrcDesktop: string;
-  imageSrcMobile: string;
+  imageSrc: string;
   href?: string;
   meta?: string;
   tech?: string;
+  mobileImageSrc?: string;
 };
 
 interface FocusRailProps {
@@ -54,15 +54,6 @@ export function FocusRail({
 }: FocusRailProps) {
   const [active, setActive] = React.useState(initialIndex);
   const [isHovering, setIsHovering] = React.useState(false);
-  const [isMobile, setIsMobile] = React.useState(false);
-
-  // Detect mobile viewport
-  React.useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
 
   const count = items.length;
   const activeIndex = wrap(0, count, active);
@@ -121,32 +112,12 @@ export function FocusRail({
       tabIndex={0}
       onKeyDown={onKeyDown}
     >
-      {/* Background Ambience - Integrado ao Design System */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <AnimatePresence mode="popLayout">
-          <motion.div
-            key={`bg-${activeItem.id}`}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.15 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="absolute inset-0"
-          >
-            <img
-              src={isMobile ? activeItem.imageSrcMobile : activeItem.imageSrcDesktop}
-              alt=""
-              className="h-full w-full object-cover blur-3xl saturate-150"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
-          </motion.div>
-        </AnimatePresence>
-      </div>
+      {/* Background Ambience removido para um visual mais limpo */}
+      <div className="absolute inset-0 z-0 pointer-events-none bg-black/40" />
 
-      {/* Main Stage - Full Width */}
       <div className="relative z-10 flex flex-1 flex-col justify-center">
-        {/* DRAGGABLE RAIL CONTAINER - Full Width */}
         <motion.div
-          className="relative flex h-[450px] w-full items-center justify-center perspective-[1200px] cursor-grab active:cursor-grabbing"
+          className="relative flex h-[220px] md:h-[350px] lg:h-[380px] w-full items-center justify-center perspective-[1200px] cursor-grab active:cursor-grabbing"
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
           dragElastic={0.2}
@@ -176,8 +147,7 @@ export function FocusRail({
               <motion.div
                 key={absIndex}
                 className={cn(
-                  "absolute w-[260px] lg:w-[480px] rounded-2xl border border-glass bg-glass-secondary shadow-2xl transition-shadow duration-300 backdrop-blur-md",
-                  isMobile ? "aspect-[3/4]" : "aspect-video",
+                  "absolute w-[260px] lg:w-[480px] aspect-video rounded-2xl border border-glass bg-glass-secondary shadow-2xl transition-shadow duration-300 backdrop-blur-md",
                   isCenter ? "z-20 shadow-accent-glow/20 border-accent/30" : "z-10"
                 )}
                 initial={false}
@@ -197,11 +167,16 @@ export function FocusRail({
                   if (offset !== 0) setActive((p) => p + offset);
                 }}
               >
-                <img
-                  src={isMobile ? item.imageSrcMobile : item.imageSrcDesktop}
-                  alt={item.title}
-                  className="h-full w-full rounded-2xl object-cover pointer-events-none"
-                />
+                <picture className="block h-full w-full rounded-2xl pointer-events-none">
+                  {item.mobileImageSrc && (
+                    <source media="(max-width: 768px)" srcSet={item.mobileImageSrc} />
+                  )}
+                  <img
+                    src={item.imageSrc}
+                    alt={item.title}
+                    className="h-full w-full rounded-2xl object-cover pointer-events-none"
+                  />
+                </picture>
 
                 {/* Lighting layers - Glass effect */}
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-white/5 to-transparent pointer-events-none" />
@@ -213,7 +188,7 @@ export function FocusRail({
 
         {/* Info & Controls - Design System Integration with Padding */}
         <div className="mx-auto mt-12 flex w-full container-base flex-col items-center justify-between gap-6 lg:flex-row pointer-events-auto ">
-          <div className="flex flex-1 flex-col items-center text-center lg:items-start lg:text-left h-32 justify-center">
+          <div className="flex flex-1 flex-col items-center text-center lg:items-start lg:text-left justify-center">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem.id}
@@ -223,23 +198,23 @@ export function FocusRail({
                 transition={{ duration: 0.3 }}
                 className="space-y-2"
               >
-                {activeItem.meta && (
-                  <span className="text-xs font-body font-medium uppercase tracking-wider text-accent">
-                    {activeItem.meta}
-                  </span>
-                )}
                 <h2 className="text-3xl font-heading font-bold tracking-tight lg:text-4xl text-text-primary">
                   {activeItem.title}
                 </h2>
+                {activeItem.meta && (
+                  <h3 className="text-xs font-body font-medium uppercase tracking-wider text-text-primary">
+                    {activeItem.meta}
+                  </h3>
+                )}
                 {activeItem.description && (
                   <p className="max-w-md text-text-secondary font-body text-sm leading-relaxed">
                     {activeItem.description}
                   </p>
                 )}
                 {activeItem.tech && (
-                  <div className="text-xs font-body text-accent pt-2">
+                  <h4 className="text-xs font-body text-accent pt-2">
                     {activeItem.tech}
-                  </div>
+                  </h4>
                 )}
               </motion.div>
             </AnimatePresence>
