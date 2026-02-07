@@ -1,10 +1,25 @@
+
 import { Timeline, type TimelineEntry } from "./ui/Timeline";
-import { ShoppingCart, Rocket, Zap, Award } from "lucide-react";
+import { Rocket, Zap, Award, Cpu, Database, Globe } from "lucide-react";
+
+const VideoPlayer = ({ videoId, title }: { videoId: string; title: string }) => {
+  return (
+    <div className="w-full max-w-[355px] h-[200px] rounded-lg overflow-hidden relative shadow-lg glass-card group">
+      <div className="absolute inset-0 z-10 bg-transparent/10" />
+      <iframe
+        src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&showinfo=0&rel=0&playsinline=1&disablekb=1&fs=0`}
+        title={title}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        className="w-full h-full scale-[1.35] pointer-events-none"
+      />
+    </div>
+  );
+};
 
 export const Experience = () => {
   const data: TimelineEntry[] = [
     {
-      title: "2021",
+      title: "2021/22",
       content: (
         <div className="space-y-6">
           <div className="flex items-start gap-3">
@@ -60,60 +75,125 @@ export const Experience = () => {
       ),
     },
     {
-      title: "2022",
+      title: "2022/23",
       content: (
         <div className="space-y-6">
           <div className="flex items-start gap-3">
-            <ShoppingCart className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+            <Cpu className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
             <div>
               <h4 className="font-heading text-xl lg:text-2xl font-semibold text-text-primary mb-2">
-                Consectetur Adipiscing
+                Robótica & Desenvolvimento Web
               </h4>
               <p className="text-accent text-sm lg:text-base font-medium mb-3">
-                Lorem Ipsum • Dolor Sit
+                Projetos Integradores • IF Baiano
               </p>
             </div>
           </div>
 
           <p className="text-text-secondary text-sm lg:text-base leading-relaxed">
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-            commodo consequat. Duis aute irure dolor in reprehenderit.
+            Já no segundo ano do ensino médio, tive contato com robótica através da disciplina de "Projeto Integrador I",
+            onde desenvolvemos projetos fascinantes como uma aranha robô e um sistema de detecção de vazamento de gás.
           </p>
+
+          <div className="flex flex-row flex-wrap gap-3 mt-6">
+            <VideoPlayer videoId="ujD9UP9rh4U" title="Aranha Robô - Projeto Integrador" />
+            <div className="aspect-square sm:max-h-[200px] relative overflow-hidden rounded-lg group">
+              <img
+                src="/timeline/control_aranha.webp"
+                alt="Controle da Aranha Robô"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div className="aspect-square sm:max-h-[200px] relative overflow-hidden rounded-lg group">
+              <img
+                src="/timeline/sistema_reconhecimento_gas.webp"
+                alt="Sistema de detecção de vazamento de gás"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+          </div>
 
           <div className="space-y-2">
             <div className="flex items-start gap-2 text-text-secondary text-xs lg:text-sm">
               <span className="text-accent">✓</span>
-              <span>Voluptate velit esse cillum dolore</span>
+              <span>Análise de Sistemas para Web</span>
             </div>
             <div className="flex items-start gap-2 text-text-secondary text-xs lg:text-sm">
               <span className="text-accent">✓</span>
-              <span>Eu fugiat nulla pariatur excepteur</span>
+              <span>Banco de Dados</span>
             </div>
             <div className="flex items-start gap-2 text-text-secondary text-xs lg:text-sm">
               <span className="text-accent">✓</span>
-              <span>Sint occaecat cupidatat non proident</span>
+              <span>Programação de Sistemas para Web I</span>
             </div>
             <div className="flex items-start gap-2 text-text-secondary text-xs lg:text-sm">
               <span className="text-accent">✓</span>
-              <span>Sunt in culpa qui officia deserunt</span>
+              <span>Redes de Computadores</span>
             </div>
           </div>
 
-          <div className="mt-6 p-5 glass-card border border-glass-border rounded-lg backdrop-blur-sm">
-            <p className="text-text-primary font-medium text-sm lg:text-base mb-2">
-              🏆 Lorem Ipsum Dolor
+          <div className="mt-4 p-5 glass-card border border-glass-border rounded-lg backdrop-blur-sm">
+            <p className="text-text-primary font-medium text-sm lg:text-base mb-2 flex items-center gap-2">
+              <Database className="w-4 h-4 text-accent" /> Projeto Integrado
             </p>
-            <ul className="space-y-2 text-text-secondary text-xs lg:text-sm">
-              <li>• Consectetur adipiscing elit sed do eiusmod tempor</li>
-              <li>• Incididunt ut labore et dolore magna aliqua</li>
-              <li>• Ut enim ad minim veniam quis nostrud</li>
-            </ul>
+            <p className="text-text-secondary text-sm leading-relaxed mb-3">
+              As disciplinas de Análise, Banco de Dados e Programação se uniram para um grande trabalho integrado.
+              Tivemos a experiência de desenvolver um protótipo de sistema completo, desde o levantamento de requisitos
+              e abstração do banco de dados até o sistema documentado.
+            </p>
+            <p className="text-text-secondary text-sm leading-relaxed mb-4">
+              O resultado foi um <strong>Sistema de Gerenciamento de Tarefas</strong> com ranking da turma,
+              projetado para causar competitividade e estimular a produtividade.
+            </p>
+            <div className="rounded-lg overflow-hidden group relative w-fit sm:h-[200px] ">
+              <img 
+                src="/timeline/jsor_projeto_integrado.webp" 
+                alt="Sistema de Gerenciamento de Tarefas" 
+                className="w-auto h-full object-contain group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+          </div>
+
+          <div className="mt-6">
+            <h5 className="font-heading text-lg font-semibold text-text-primary mb-3 flex items-center gap-2">
+              <Globe className="w-5 h-5 text-accent" /> Estágio no CETEIA
+            </h5>
+            <p className="text-text-secondary text-sm lg:text-base leading-relaxed mb-4">
+              Realizei meu estágio obrigatório do IF Baiano (não remunerado) desenvolvendo um site institucional para o <a href="https://www.instagram.com/ceteia_ifbaiano/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">CETEIA</a>,
+              garantindo experiência prática com WordPress.
+            </p>
+            
+            <div className="flex flex-wrap gap-4 mb-3">
+              <div className="aspect-video max-h-[200px] relative overflow-hidden rounded-lg group ">
+                <img 
+                  src="/timeline/build_site_ceteia.webp" 
+                  alt="Construção do site CETEIA" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="aspect-square sm:max-h-[200px] relative overflow-hidden rounded-lg group">
+                <img 
+                  src="/timeline/present_site_ceteia.webp" 
+                  alt="Apresentação do site CETEIA" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            </div>
+            
+            <a 
+              href="https://www.instagram.com/p/CuZ90PeguEZ/?img_index=1" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-accent text-sm hover:underline"
+            >
+              Ver post no Instagram <Zap className="w-3 h-3" />
+            </a>
           </div>
         </div>
       ),
     },
     {
-      title: "2023",
+      title: "2023/24",
       content: (
         <div className="space-y-6">
           <div className="flex items-start gap-3">
