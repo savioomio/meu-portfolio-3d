@@ -229,7 +229,7 @@ export function FocusRail({
               >
                 <ChevronLeft className="h-5 w-5" />
               </button>
-              <span className="min-w-[40px] text-center text-xs font-body text-text-disabled">
+              <span className="min-w-[40px] text-center text-xs font-body text-text-primary">
                 {activeIndex + 1} / {count}
               </span>
               <button
