@@ -1,6 +1,6 @@
 
 import { Timeline, type TimelineEntry } from "./ui/Timeline";
-import { Rocket, Zap, Award, Cpu, Database, Globe } from "lucide-react";
+import { Rocket, Zap, Cpu, Database, Globe } from "lucide-react";
 
 const VideoPlayer = ({ videoId, title }: { videoId: string; title: string }) => {
   return (
