@@ -48,32 +48,34 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
       {/* Timeline com container padrão */}
       <div ref={ref} className="relative container-base pb-12 lg:pb-20 max-lg:pl-0">
-        {data.map((item, index) => (
-          <div
-            key={index}
-            className="flex justify-start pt-10 lg:pt-32 gap-4 lg:gap-10 relative z-20"
-          >
-            {/* Coluna da Data - STICKY */}
-            <div className="sticky top-24 lg:top-32 self-start flex-shrink-0 w-6 lg:w-max h-fit z-20 lg:pl-[9px]">
-              <div className="relative">
-                {/* Bolinha do Timeline */}
-                <div className="absolute left-0 lg:left-0 top-0 lg:top-0 h-10 w-10 rounded-full bg-black flex items-center justify-center z-0">
-                  <div className="h-4 w-4 rounded-full bg-glass-secondary border border-accent/30 p-2 shadow-[0_0_12px_rgba(97,218,251,0.3)]" />
+        <ol>
+          {data.map((item, index) => (
+            <li
+              key={index}
+              className="flex justify-start pt-10 lg:pt-32 gap-4 lg:gap-10 relative z-20"
+            >
+              {/* Coluna da Data - STICKY */}
+              <div className="sticky top-24 lg:top-32 self-start flex-shrink-0 w-6 lg:w-max h-fit z-20 lg:pl-[9px]">
+                <div className="relative">
+                  {/* Bolinha do Timeline */}
+                  <div className="absolute left-0 lg:left-0 top-0 lg:top-0 h-10 w-10 rounded-full bg-black flex items-center justify-center z-0">
+                    <div className="h-4 w-4 rounded-full bg-glass-secondary border border-accent/30 p-2 shadow-[0_0_12px_rgba(97,218,251,0.3)]" />
+                  </div>
+                  
+                  {/* Ano - STICKY */}
+                  <h3 className="font-heading text-xl lg:text-3xl xl:text-4xl font-bold text-text-secondary ml-10 lg:ml-14 max-lg:w-max max-lg:px-4 max-lg:py-2 max-lg:rounded-2xl max-lg:backdrop-blur-lg max-lg:border max-lg:border-glass max-lg:[background:var(--glass-primary)] lg:min-w-[141px]">
+                    {item.title}
+                  </h3>
                 </div>
-                
-                {/* Ano - STICKY */}
-                <h3 className="font-heading text-xl lg:text-3xl xl:text-4xl font-bold text-text-secondary ml-10 lg:ml-14 max-lg:w-max max-lg:px-4 max-lg:py-2 max-lg:rounded-2xl max-lg:backdrop-blur-lg max-lg:border max-lg:border-glass max-lg:[background:var(--glass-primary)] lg:min-w-[141px]">
-                  {item.title}
-                </h3>
               </div>
-            </div>
 
-            {/* Coluna do Conteúdo */}
-            <div className="flex-1 pb-14 lg:pb-12 pt-14 lg:pt-0">
-              {item.content}
-            </div>
-          </div>
-        ))}
+              {/* Coluna do Conteúdo */}
+              <div className="flex-1 pb-14 lg:pb-12 pt-14 lg:pt-0">
+                {item.content}
+              </div>
+            </li>
+          ))}
+        </ol>
         
         {/* Linha vertical do Timeline */}
         <div
