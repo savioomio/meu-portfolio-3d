@@ -62,7 +62,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 </div>
                 
                 {/* Ano - STICKY */}
-                <h3 className="font-heading text-xl lg:text-3xl xl:text-4xl font-bold text-text-secondary ml-10 lg:ml-14 max-lg:w-max max-lg:px-4 max-lg:py-2 max-lg:rounded-2xl max-lg:backdrop-blur-lg max-lg:border max-lg:border-glass max-lg:[background:var(--glass-primary)]">
+                <h3 className="font-heading text-xl lg:text-3xl xl:text-4xl font-bold text-text-secondary ml-10 lg:ml-14 max-lg:w-max max-lg:px-4 max-lg:py-2 max-lg:rounded-2xl max-lg:backdrop-blur-lg max-lg:border max-lg:border-glass max-lg:[background:var(--glass-primary)] lg:min-w-[141px]">
                   {item.title}
                 </h3>
               </div>

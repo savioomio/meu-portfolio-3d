@@ -29,7 +29,7 @@ export const Experience = () => {
                 Técnico em Informática para Internet
               </h4>
               <p className="text-accent text-sm lg:text-base font-medium mb-3">
-                IF Baiano • Campus Guanambi
+                IF Baiano • Primeiro contato com tecnologia
               </p>
             </div>
           </div>
@@ -58,19 +58,6 @@ export const Experience = () => {
               <span>Fundamentos de Sistemas Operacionais</span>
             </div>
           </div>
-
-          <div className="flex flex-col lg:flex-row gap-3 mt-6">
-            <div className="p-4 glass-card border border-glass-border rounded-lg backdrop-blur-sm min-w-[200px]">
-              <Award className="w-6 h-6 text-accent mb-2" />
-              <p className="text-text-primary text-sm font-medium">Formação Técnica</p>
-              <p className="text-text-secondary text-xs mt-1">Ensino Médio Integrado</p>
-            </div>
-            <div className="p-4 glass-card border border-glass-border rounded-lg backdrop-blur-sm min-w-[200px]">
-              <Rocket className="w-6 h-6 text-accent mb-2" />
-              <p className="text-text-primary text-sm font-medium">Primeiro Contato</p>
-              <p className="text-text-secondary text-xs mt-1">Com Tecnologia</p>
-            </div>
-          </div>
         </div>
       ),
     },
@@ -85,7 +72,7 @@ export const Experience = () => {
                 Robótica & Desenvolvimento Web
               </h4>
               <p className="text-accent text-sm lg:text-base font-medium mb-3">
-                Projetos Integradores • IF Baiano
+                Projetos Integradores • Estágio
               </p>
             </div>
           </div>
@@ -132,7 +119,7 @@ export const Experience = () => {
             </div>
           </div>
 
-          <div className="mt-4 p-5 glass-card border border-glass-border rounded-lg backdrop-blur-sm">
+          <div className="mt-4 p-5 glass-card rounded-lg backdrop-blur-sm">
             <p className="text-text-primary font-medium text-sm lg:text-base mb-2 flex items-center gap-2">
               <Database className="w-4 h-4 text-accent" /> Projeto Integrado
             </p>
@@ -200,6 +187,148 @@ export const Experience = () => {
             <Rocket className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
             <div>
               <h4 className="font-heading text-xl lg:text-2xl font-semibold text-text-primary mb-2">
+                Conclusão & Inovação
+              </h4>
+              <p className="text-accent text-sm lg:text-base font-medium mb-3">
+                IF Baiano • Drones Guanambi • CETEIA
+              </p>
+            </div>
+          </div>
+          
+          <p className="text-text-secondary text-sm lg:text-base leading-relaxed">
+            No final de 2023 eu comecei o último ano do ensino médio que iria acabar em 2024, consolidei minha formação técnica com disciplinas avançadas e projetos práticos,
+            preparando-me para os desafios profissionais.
+          </p>
+
+          <div className="space-y-2">
+            <div className="flex items-start gap-2 text-text-secondary text-xs lg:text-sm">
+              <span className="text-accent">✓</span>
+              <span>Projeto de Conclusão de Curso (PCC)</span>
+            </div>
+            <div className="flex items-start gap-2 text-text-secondary text-xs lg:text-sm">
+              <span className="text-accent">✓</span>
+              <span>Projeto Integrador II</span>
+            </div>
+            <div className="flex items-start gap-2 text-text-secondary text-xs lg:text-sm">
+              <span className="text-accent">✓</span>
+              <span>Programação de Sistemas para Web II</span>
+            </div>
+            <div className="flex items-start gap-2 text-text-secondary text-xs lg:text-sm">
+              <span className="text-accent">✓</span>
+              <span>Instalação e Configuração de Servidores</span>
+            </div>
+            <div className="flex items-start gap-2 text-text-secondary text-xs lg:text-sm">
+              <span className="text-accent">✓</span>
+              <span>Orientação de Prática Profissional</span>
+            </div>
+          </div>
+
+          <div className="mt-6">
+            <h5 className="font-heading text-lg font-semibold text-text-primary mb-3 flex items-center gap-2">
+              <Cpu className="w-5 h-5 text-accent" /> Drones Guanambi
+            </h5>
+            <p className="text-text-secondary text-sm leading-relaxed mb-3">
+              Um grande marco na minha vida foi a entrada na equipe de drones do IF Baiano: <a href="https://www.instagram.com/dronesguanambi/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">"Drones Guanambi"</a>.
+              Foi uma oportunidade incrível de explorar novas tecnologias e trabalhar em equipe.
+            </p>
+            <div className="flex flex-wrap gap-4 mb-3"> 
+              <div className="rounded-lg overflow-hidden relative group w-fit sm:h-[200px] ">
+                <img
+                  src="/timeline/drone_used_ifsc.webp"
+                  alt="Drone usado na competição de drones do IFSC 2023"
+                  className="w-auto h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-2 text-xs text-accent text-center backdrop-blur-sm transform translate-y-full group-hover:translate-y-0 transition-transform">
+                  Drone usado na competição de drones do IFSC 2023
+                </div>
+              </div>
+              <div className="rounded-lg overflow-hidden relative group w-fit sm:h-[200px] ">
+                <img
+                  src="/timeline/ajustes_drone_ifsc.webp"
+                  alt="Pit stop no drone usado na competição"
+                  className="w-auto h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-2 text-xs text-accent text-center backdrop-blur-sm transform translate-y-full group-hover:translate-y-0 transition-transform">
+                  Pit stop no drone usado na competição
+                </div>
+              </div>
+              <div className="rounded-lg overflow-hidden relative group w-fit sm:h-[200px] ">
+                <img
+                  src="/timeline/first_place.webp"
+                  alt="Primeiro lugar na competição de drones do IFSC 2023"
+                  className="w-auto h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-2 text-xs text-accent text-center backdrop-blur-sm transform translate-y-full group-hover:translate-y-0 transition-transform">
+                  Minha primeira competição de drones
+                </div>
+              </div>
+              <div className="rounded-lg overflow-hidden relative group w-fit sm:h-[200px] ">
+                <img
+                  src="/timeline/first_ifsc.webp"
+                  alt="Primeira competição de drones do IFSC 2023"
+                  className="w-auto h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-2 text-xs text-accent text-center backdrop-blur-sm transform translate-y-full group-hover:translate-y-0 transition-transform">
+                  Primeiro lugar na competição de drones do IFSC 2023
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div className="mt-6 p-5 glass-card rounded-lg backdrop-blur-sm">
+            <h5 className="font-heading text-lg font-semibold text-text-primary mb-3 flex items-center gap-2">
+              <Database className="w-5 h-5 text-accent" /> Estágio Agro Callidos
+            </h5>
+            <p className="text-text-secondary text-sm lg:text-base leading-relaxed mb-4">
+              Em paralelo, fui aprovado no processo seletivo para bolsista de estágio técnico em informática 
+              no projeto "Agro Callidos" do CETEIA.
+            </p>
+            
+             <div className="flex flex-row flex-wrap gap-4 mb-3">
+              <div className="aspect-video relative overflow-hidden rounded-lg group sm:max-h-[200px]">
+                <img 
+                  src="/timeline/estagio_ceteia_meeting.webp" 
+                  alt="Reunião do estágio na Agro Callidos no CETEIA" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-2 text-xs text-accent text-center backdrop-blur-sm transform translate-y-full group-hover:translate-y-0 transition-transform">
+                  Reunião do estágio na Agro Callidos no CETEIA
+                </div>
+              </div>
+              <div className="aspect-square relative overflow-hidden rounded-lg group sm:max-h-[200px]">
+                <img 
+                  src="/timeline/present_estagio_tenda_ciencia.jfif" 
+                  alt="Apresentação na Tenda da Ciência 2024" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                 <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-2 text-xs text-accent text-center backdrop-blur-sm transform translate-y-full group-hover:translate-y-0 transition-transform">
+                  Apresentação na Tenda da Ciência 2024
+                </div>
+              </div>
+              <div className="aspect-square relative overflow-hidden rounded-lg group sm:max-h-[200px]">
+                <img 
+                  src="/timeline/setup_estagio_caliduslink.jfif" 
+                  alt="Setup do estágio na Agro Callidos no CETEIA" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                 <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-2 text-xs text-accent text-center backdrop-blur-sm transform translate-y-full group-hover:translate-y-0 transition-transform">
+                  Setup do estágio na Agro Callidos no CETEIA
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "2024",
+      content: (
+        <div className="space-y-6">
+          <div className="flex items-start gap-3">
+            <Rocket className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+            <div>
+              <h4 className="font-heading text-xl lg:text-2xl font-semibold text-text-primary mb-2">
                 Sed Do Eiusmod Tempor
               </h4>
               <p className="text-accent text-sm lg:text-base font-medium mb-3">
@@ -233,19 +362,141 @@ export const Experience = () => {
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mt-6">
-            <div className="glass-card p-4 text-center border border-glass-border rounded-lg backdrop-blur-sm">
+            <div className="glass-card p-4 text-center rounded-lg backdrop-blur-sm">
               <p className="text-accent text-2xl font-bold font-heading">+40%</p>
               <p className="text-text-secondary text-xs mt-1">Lorem Ipsum</p>
             </div>
-            <div className="glass-card p-4 text-center border border-glass-border rounded-lg backdrop-blur-sm">
+            <div className="glass-card p-4 text-center rounded-lg backdrop-blur-sm">
               <p className="text-accent text-2xl font-bold font-heading">-60%</p>
               <p className="text-text-secondary text-xs mt-1">Dolor Sit</p>
             </div>
-            <div className="glass-card p-4 text-center border border-glass-border rounded-lg backdrop-blur-sm">
+            <div className="glass-card p-4 text-center rounded-lg backdrop-blur-sm">
               <p className="text-accent text-2xl font-bold font-heading">95+</p>
               <p className="text-text-secondary text-xs mt-1">Amet</p>
             </div>
-            <div className="glass-card p-4 text-center border border-glass-border rounded-lg backdrop-blur-sm">
+            <div className="glass-card p-4 text-center rounded-lg backdrop-blur-sm">
+              <p className="text-accent text-2xl font-bold font-heading">100%</p>
+              <p className="text-text-secondary text-xs mt-1">Consectetur</p>
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "2025",
+      content: (
+        <div className="space-y-6">
+          <div className="flex items-start gap-3">
+            <Rocket className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+            <div>
+              <h4 className="font-heading text-xl lg:text-2xl font-semibold text-text-primary mb-2">
+                Sed Do Eiusmod Tempor
+              </h4>
+              <p className="text-accent text-sm lg:text-base font-medium mb-3">
+                Lorem Ipsum Dolor • Adipiscing & Elit
+              </p>
+            </div>
+          </div>
+          
+          <p className="text-text-secondary text-sm lg:text-base leading-relaxed">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque 
+            laudantium, totam rem aperiam. Eaque ipsa quae ab illo inventore.
+          </p>
+
+          <div className="space-y-2">
+            <div className="flex items-start gap-2 text-text-secondary text-xs lg:text-sm">
+              <span className="text-accent">✓</span>
+              <span>Nemo enim ipsam voluptatem quia voluptas</span>
+            </div>
+            <div className="flex items-start gap-2 text-text-secondary text-xs lg:text-sm">
+              <span className="text-accent">✓</span>
+              <span>Aspernatur aut odit aut fugit sed quia</span>
+            </div>
+            <div className="flex items-start gap-2 text-text-secondary text-xs lg:text-sm">
+              <span className="text-accent">✓</span>
+              <span>Consequuntur magni dolores eos qui ratione</span>
+            </div>
+            <div className="flex items-start gap-2 text-text-secondary text-xs lg:text-sm">
+              <span className="text-accent">✓</span>
+              <span>Neque porro quisquam est qui dolorem</span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mt-6">
+            <div className="glass-card p-4 text-center rounded-lg backdrop-blur-sm">
+              <p className="text-accent text-2xl font-bold font-heading">+40%</p>
+              <p className="text-text-secondary text-xs mt-1">Lorem Ipsum</p>
+            </div>
+            <div className="glass-card p-4 text-center rounded-lg backdrop-blur-sm">
+              <p className="text-accent text-2xl font-bold font-heading">-60%</p>
+              <p className="text-text-secondary text-xs mt-1">Dolor Sit</p>
+            </div>
+            <div className="glass-card p-4 text-center rounded-lg backdrop-blur-sm">
+              <p className="text-accent text-2xl font-bold font-heading">95+</p>
+              <p className="text-text-secondary text-xs mt-1">Amet</p>
+            </div>
+            <div className="glass-card p-4 text-center rounded-lg backdrop-blur-sm">
+              <p className="text-accent text-2xl font-bold font-heading">100%</p>
+              <p className="text-text-secondary text-xs mt-1">Consectetur</p>
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "2026...",
+      content: (
+        <div className="space-y-6">
+          <div className="flex items-start gap-3">
+            <Rocket className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+            <div>
+              <h4 className="font-heading text-xl lg:text-2xl font-semibold text-text-primary mb-2">
+                Sed Do Eiusmod Tempor
+              </h4>
+              <p className="text-accent text-sm lg:text-base font-medium mb-3">
+                Lorem Ipsum Dolor • Adipiscing & Elit
+              </p>
+            </div>
+          </div>
+          
+          <p className="text-text-secondary text-sm lg:text-base leading-relaxed">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque 
+            laudantium, totam rem aperiam. Eaque ipsa quae ab illo inventore.
+          </p>
+
+          <div className="space-y-2">
+            <div className="flex items-start gap-2 text-text-secondary text-xs lg:text-sm">
+              <span className="text-accent">✓</span>
+              <span>Nemo enim ipsam voluptatem quia voluptas</span>
+            </div>
+            <div className="flex items-start gap-2 text-text-secondary text-xs lg:text-sm">
+              <span className="text-accent">✓</span>
+              <span>Aspernatur aut odit aut fugit sed quia</span>
+            </div>
+            <div className="flex items-start gap-2 text-text-secondary text-xs lg:text-sm">
+              <span className="text-accent">✓</span>
+              <span>Consequuntur magni dolores eos qui ratione</span>
+            </div>
+            <div className="flex items-start gap-2 text-text-secondary text-xs lg:text-sm">
+              <span className="text-accent">✓</span>
+              <span>Neque porro quisquam est qui dolorem</span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mt-6">
+            <div className="glass-card p-4 text-center rounded-lg backdrop-blur-sm">
+              <p className="text-accent text-2xl font-bold font-heading">+40%</p>
+              <p className="text-text-secondary text-xs mt-1">Lorem Ipsum</p>
+            </div>
+            <div className="glass-card p-4 text-center rounded-lg backdrop-blur-sm">
+              <p className="text-accent text-2xl font-bold font-heading">-60%</p>
+              <p className="text-text-secondary text-xs mt-1">Dolor Sit</p>
+            </div>
+            <div className="glass-card p-4 text-center rounded-lg backdrop-blur-sm">
+              <p className="text-accent text-2xl font-bold font-heading">95+</p>
+              <p className="text-text-secondary text-xs mt-1">Amet</p>
+            </div>
+            <div className="glass-card p-4 text-center rounded-lg backdrop-blur-sm">
               <p className="text-accent text-2xl font-bold font-heading">100%</p>
               <p className="text-text-secondary text-xs mt-1">Consectetur</p>
             </div>
