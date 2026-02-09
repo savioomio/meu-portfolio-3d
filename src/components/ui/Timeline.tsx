@@ -39,11 +39,10 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       <div className="container-base">
         <h2 className="font-heading text-3xl lg:text-4xl font-bold mb-4 text-text-primary flex items-center gap-4">
           <span className="w-2 h-10 bg-accent rounded-full"></span>
-          Experiência Profissional_
+          Linha do tempo
         </h2>
         <p className="text-text-secondary text-sm lg:text-base max-w-2xl mb-12">
-          Minha jornada desenvolvendo soluções de E-commerce de alta performance com VTEX e Wake.
-        </p>
+          Minha jornada de aprendizado e desenvolvimento profissional.</p>
       </div>
 
       {/* Timeline com container padrão */}
