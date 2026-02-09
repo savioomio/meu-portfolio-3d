@@ -2,16 +2,16 @@
 import { Timeline, type TimelineEntry } from "./ui/Timeline";
 import { Rocket, Zap, Cpu, Database, Globe } from "lucide-react";
 
-const VideoPlayer = ({ videoId, title }: { videoId: string; title: string }) => {
+const VideoPlayer = ({ videoSrc, title }: { videoSrc: string; title: string }) => {
   return (
     <div className="w-full max-w-[355px] h-[200px] rounded-lg overflow-hidden relative shadow-lg glass-card group">
-      <div className="absolute inset-0 z-10 bg-transparent/10" />
-      <iframe
-        src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&showinfo=0&rel=0&playsinline=1&disablekb=1&fs=0`}
-        title={title}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        className="w-full h-full scale-[1.35] pointer-events-none"
-        loading="lazy"
+      <video
+        src={videoSrc}
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="w-full h-full object-cover pointer-events-none"
       />
       <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-2 text-xs text-accent text-center backdrop-blur-sm transform translate-y-0 md:translate-y-full md:group-hover:translate-y-0 transition-transform z-20">
         {title}
@@ -87,7 +87,7 @@ export const Experience = () => {
           </p>
 
           <div className="flex flex-row flex-wrap gap-3 mt-6">
-            <VideoPlayer videoId="ujD9UP9rh4U" title="Aranha Robô - Projeto Integrador" />
+            <VideoPlayer videoSrc="https://savioomiodev.com.br/assets/videos/aranha-robo.mp4" title="Aranha Robô - Projeto Integrador" />
             <div className="aspect-square sm:max-h-[200px] relative overflow-hidden rounded-lg group">
               <img
                 src="/timeline/control_aranha.webp"
