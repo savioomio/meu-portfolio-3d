@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
-import InfiniteGallery from '@/components/ui/3d-gallery-photography';
+import InfiniteGallery from '@/components/ui/3dGalleryPhotography';
 
 const images = import.meta.glob('@/assets/dignissima/*.webp', { 
   eager: true, 
