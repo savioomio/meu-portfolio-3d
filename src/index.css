@@ -13,91 +13,105 @@
 /* Space Grotesk - Light 300 */
 @font-face {
   font-display: swap;
-  font-family: 'Space Grotesk';
+  font-family: "Space Grotesk";
   font-style: normal;
   font-weight: 300;
-  src: url('/fonts/space-grotesk/space-grotesk-v22-latin-300.woff2') format('woff2');
+  src: url("/fonts/space-grotesk/space-grotesk-v22-latin-300.woff2")
+    format("woff2");
 }
 
 /* Space Grotesk - Regular 400 */
 @font-face {
   font-display: swap;
-  font-family: 'Space Grotesk';
+  font-family: "Space Grotesk";
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/space-grotesk/space-grotesk-v22-latin-regular.woff2') format('woff2');
+  src: url("/fonts/space-grotesk/space-grotesk-v22-latin-regular.woff2")
+    format("woff2");
 }
 
 /* Space Grotesk - Medium 500 */
 @font-face {
   font-display: swap;
-  font-family: 'Space Grotesk';
+  font-family: "Space Grotesk";
   font-style: normal;
   font-weight: 500;
-  src: url('/fonts/space-grotesk/space-grotesk-v22-latin-500.woff2') format('woff2');
+  src: url("/fonts/space-grotesk/space-grotesk-v22-latin-500.woff2")
+    format("woff2");
 }
 
 /* Space Grotesk - SemiBold 600 */
 @font-face {
   font-display: swap;
-  font-family: 'Space Grotesk';
+  font-family: "Space Grotesk";
   font-style: normal;
   font-weight: 600;
-  src: url('/fonts/space-grotesk/space-grotesk-v22-latin-600.woff2') format('woff2');
+  src: url("/fonts/space-grotesk/space-grotesk-v22-latin-600.woff2")
+    format("woff2");
 }
 
 /* Space Grotesk - Bold 700 */
 @font-face {
   font-display: swap;
-  font-family: 'Space Grotesk';
+  font-family: "Space Grotesk";
   font-style: normal;
   font-weight: 700;
-  src: url('/fonts/space-grotesk/space-grotesk-v22-latin-700.woff2') format('woff2');
+  src: url("/fonts/space-grotesk/space-grotesk-v22-latin-700.woff2")
+    format("woff2");
 }
 
 /* Inter - Light 300 */
 @font-face {
   font-display: swap;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 300;
-  src: url('/fonts/inter/inter-v20-latin-300.woff2') format('woff2');
+  src: url("/fonts/inter/inter-v20-latin-300.woff2") format("woff2");
 }
 
 /* Inter - Regular 400 */
 @font-face {
   font-display: swap;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/inter/inter-v20-latin-regular.woff2') format('woff2');
+  src: url("/fonts/inter/inter-v20-latin-regular.woff2") format("woff2");
 }
 
 /* Inter - Medium 500 */
 @font-face {
   font-display: swap;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 500;
-  src: url('/fonts/inter/inter-v20-latin-500.woff2') format('woff2');
+  src: url("/fonts/inter/inter-v20-latin-500.woff2") format("woff2");
 }
 
 /* Inter - SemiBold 600 */
 @font-face {
   font-display: swap;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 600;
-  src: url('/fonts/inter/inter-v20-latin-600.woff2') format('woff2');
+  src: url("/fonts/inter/inter-v20-latin-600.woff2") format("woff2");
 }
 
 /* Inter - Bold 700 */
 @font-face {
   font-display: swap;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  src: url('/fonts/inter/inter-v20-latin-700.woff2') format('woff2');
+  src: url("/fonts/inter/inter-v20-latin-700.woff2") format("woff2");
+}
+
+/* Love Buble - Custom Font */
+@font-face {
+  font-display: swap;
+  font-family: "Love Buble";
+  src: url("/fonts/LoveBubleRegular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @tailwind base;
@@ -109,35 +123,35 @@
    ============================================ */
 :root {
   /* Tipografia */
-  --font-heading: 'Space Grotesk', system-ui, sans-serif;
-  --font-body: 'Inter', system-ui, sans-serif;
-  
+  --font-heading: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
   /* Cores - Accent (Sync via Tailwind Config) */
-  --accent: theme('colors.accent.DEFAULT');
-  --accent-hover: theme('colors.accent.hover');
-  --accent-soft: theme('colors.accent.soft');
-  --accent-glow: theme('colors.accent.glow');
-  
+  --accent: theme("colors.accent.DEFAULT");
+  --accent-hover: theme("colors.accent.hover");
+  --accent-soft: theme("colors.accent.soft");
+  --accent-glow: theme("colors.accent.glow");
+
   /* Cores - Glass Morphism */
-  --glass-primary: theme('colors.glass.primary');
-  --glass-secondary: theme('colors.glass.secondary');
-  --glass-border: theme('colors.glass.border');
-  
+  --glass-primary: theme("colors.glass.primary");
+  --glass-secondary: theme("colors.glass.secondary");
+  --glass-border: theme("colors.glass.border");
+
   /* Cores - Texto */
-  --text-primary: theme('colors.text.primary');
-  --text-secondary: theme('colors.text.secondary');
-  --text-disabled: theme('colors.text.disabled');
-  
+  --text-primary: theme("colors.text.primary");
+  --text-secondary: theme("colors.text.secondary");
+  --text-disabled: theme("colors.text.disabled");
+
   /* Base */
   --bg-base: #000000;
-  
+
   /* Configurações de renderização */
   font-family: var(--font-body);
   line-height: 1.6;
   font-weight: 400;
   color: var(--text-primary);
   background-color: var(--bg-base);
-  
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -166,7 +180,12 @@ body {
 /* ============================================
    TIPOGRAFIA
    ============================================ */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.2;
@@ -186,7 +205,13 @@ h3 {
   font-size: clamp(1.5rem, 3vw, 2.5rem);
 }
 
-p, span, div, a, button, input, textarea {
+p,
+span,
+div,
+a,
+button,
+input,
+textarea {
   font-family: var(--font-body);
 }
 
@@ -206,7 +231,7 @@ a:hover {
 
 /* Link com underline animado */
 a.link-underline::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -2px;
   left: 0;
@@ -272,30 +297,30 @@ a.link-underline:hover::after {
     @apply max-w-7xl mx-auto px-6 lg:px-12 xl:px-20;
     /* max-width: 1280px */
   }
-  
+
   /* Container Médio - Para conteúdo mais focado */
   .container-medium {
     @apply max-w-4xl mx-auto px-6 lg:px-12;
     /* max-width: 896px */
   }
-  
+
   /* Section Padding - Espaçamento vertical padrão */
   .section-padding {
     @apply py-16 lg:py-20 xl:py-24;
   }
-  
+
   /* Glass Card */
   .glass-card {
     @apply backdrop-blur-md border border-glass rounded-2xl;
     background: var(--glass-secondary);
   }
-  
+
   /* Glass Header */
   .glass-header {
     @apply backdrop-blur-lg border-b border-glass;
     background: var(--glass-primary);
   }
-  
+
   /* Button Primary com glow */
   .btn-primary {
     @apply px-6 py-3 rounded-full font-semibold transition-all duration-300;
@@ -303,15 +328,17 @@ a.link-underline:hover::after {
     color: #000;
     box-shadow: 0 0 20px var(--accent-glow);
   }
-  
+
   .btn-primary:hover {
     background: var(--accent);
-    box-shadow: 0 0 40px var(--accent-glow), 0 0 60px rgba(97, 218, 251, 0.3);
+    box-shadow:
+      0 0 40px var(--accent-glow),
+      0 0 60px rgba(97, 218, 251, 0.3);
     transform: translateY(-2px) scale(1.02);
     filter: brightness(1.1);
     color: #000;
   }
-  
+
   /* Heading com spacing correto */
   .heading-section {
     @apply font-heading text-3xl lg:text-4xl font-bold mb-8;
@@ -319,7 +346,15 @@ a.link-underline:hover::after {
   }
   /* Glow effect para texto */
   .text-glow {
-    text-shadow: 0 0 10px rgba(72, 201, 234, 0.5), 0 0 20px rgba(72, 201, 234, 0.3);
+    text-shadow:
+      0 0 10px rgba(72, 201, 234, 0.5),
+      0 0 20px rgba(72, 201, 234, 0.3);
+  }
+
+  .font-love-buble {
+    font-family: "Love Buble", cursive;
+    font-weight: normal;
+    font-style: normal;
   }
 
   /* Animations */
