@@ -10,6 +10,7 @@ lerna-debug.log*
 node_modules
 dist
 context.md
+scripts/
 dist-ssr
 *.local
 img_ops.local.py
