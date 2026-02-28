@@ -171,13 +171,13 @@ export function Dignissima() {
         <meta property="og:url" content="https://savioomiodev.com.br/dignissima" />
         <meta property="og:title" content="Minha Digníssima - Sávio Pessôa" />
         <meta property="og:description" content="Uma página especial, feita com carinho, apenas para você." />
-        <meta property="og:image" content="https://savioomiodev.com.br/og-image.png" />
+        <meta property="og:image" content="https://savioomiodev.com.br/og-dignissima.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://savioomiodev.com.br/dignissima" />
         <meta property="twitter:title" content="Minha Digníssima - Sávio Pessôa" />
         <meta property="twitter:description" content="Uma página especial, feita com carinho, apenas para você." />
-        <meta property="twitter:image" content="https://savioomiodev.com.br/og-image.png" />
+        <meta property="twitter:image" content="https://savioomiodev.com.br/og-dignissima.png" />
       </Helmet>
       
       <audio ref={audioRef} loop>
